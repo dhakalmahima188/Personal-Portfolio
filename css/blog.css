@@ -113,6 +113,12 @@ a {
   transition-timing-function: ease-in-out;
 }
 
+.header_blog{
+    margin-left:auto;
+    margin-right :auto;
+    text-align: center;
+}
+
 .card:before {
   background: #ddd;
   width: 250%;
