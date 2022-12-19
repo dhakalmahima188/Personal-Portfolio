@@ -24,7 +24,7 @@ a {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 4rem;
   padding: 4rem;
   margin: 0 auto;
@@ -34,23 +34,24 @@ a {
 .card {
   font-family: 'Heebo';
   --bg-filter-opacity: 0.5;
+  background-color: cyan;
   background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
-  height: 20em;
-  width: 15em;
-  font-size: 1.5em;
-  color: white;
-  border-radius: 1em;
+  height: 15em;
+  width: 10em;
+  font-size: 1em;
+  color: rgb(240, 228, 228);
+  border-radius: 0.5em;
   padding: 1em;
   /*margin: 2em;*/
   display: flex;
   align-items: flex-end;
   background-size: cover;
   background-position: center;
-  box-shadow: 0 0 5em -1em black;
-  transition: all, var(--transition-time);
+  /* box-shadow: 0 0 5em -1em black; */
+  /* transition: all, var(--transition-time); */
   position: relative;
   overflow: hidden;
-  border: 10px solid #ccc;
+  border: 2px solid rgb(20, 157, 220);
   text-decoration: none;
 }
 /* 
@@ -60,15 +61,15 @@ a {
 
 .card h1 {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 0.75em;
   line-height: 1.2em;
 }
 
 .card p {
-  font-size: 0.75em;
+  font-size: 0.7em;
   font-family: 'Open Sans';
   margin-top: 0.5em;
-  line-height: 2em;
+  /* line-height: 2em; */
 }
 
 .card .tags {
@@ -94,24 +95,13 @@ a {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 0.75em;
+  font-size: 0.5em;
   padding: 1em;
   line-height: 1em;
   opacity: .8;
 }
 
-.card:before, .card:after {
-  content: '';
-  transform: scale(0);
-  transform-origin: top left;
-  border-radius: 50%;
-  position: absolute;
-  left: -50%;
-  top: -50%;
-  z-index: -5;
-  transition: all, var(--transition-time);
-  transition-timing-function: ease-in-out;
-}
+
 
 .header_blog{
     margin-left:auto;
@@ -125,22 +115,18 @@ a {
   height: 250%;
 }
 
-.card:after {
-  background: white;
-  width: 200%;
-  height: 200%;
-}
 
 /* .card:hover {
   color: var(--color);
 } */
 
-.card:hover:before, .card:hover:after {
+/* .card:hover:before, .card:hover:after {
   transform: scale(1);
-}
+} */
 
 .card-grid-space .num {
-  font-size: 3em;
+  
+  font-size: 0.75em;
   margin-bottom: 1.2rem;
   margin-left: 1rem;
 }
@@ -158,7 +144,7 @@ a {
 }
 
 .info h1 {
-  font-size: 1em;
+  font-size: 0.5em;
   font-weight: normal;
 }
 
@@ -171,7 +157,7 @@ a {
 
 @media screen and (max-width: 900px) {
   .cards-wrapper {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .info {
     justify-content: center;
