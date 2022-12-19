@@ -535,8 +535,14 @@ mark,
 }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+  height:320px;
+  width:210px;
+  
+}
+.img-fluids {
+  height:370px;
+ 
+  
 }
 
 .img-thumbnail {
