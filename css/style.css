@@ -10016,8 +10016,8 @@ h6,
   justify-content: center;
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr  1fr 1fr ;
-  grid-gap: 1rem;
-  padding: 2rem;
+  grid-gap: 2rem;
+  padding: 1.75rem;
   margin: 0 auto;
   width: max-content;
 }
