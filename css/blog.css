@@ -24,7 +24,7 @@ a {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
   grid-gap: 4rem;
   padding: 4rem;
   margin: 0 auto;
@@ -36,9 +36,9 @@ a {
   --bg-filter-opacity: 0.5;
   background-color: cyan;
   background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
-  height: 15em;
-  width: 10em;
-  font-size: 1em;
+  height: 20em;
+  width: 17em;
+  font-size: 1.5em;
   color: rgb(240, 228, 228);
   border-radius: 0.5em;
   padding: 1em;
@@ -157,7 +157,7 @@ a {
 
 @media screen and (max-width: 900px) {
   .cards-wrapper {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr ;
   }
   .info {
     justify-content: center;
