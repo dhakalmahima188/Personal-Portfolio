@@ -10054,7 +10054,7 @@ h6,
 
 @media screen and (max-width: 900px) {
   .skillsn-wrapper {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr  ;
+    grid-template-columns: 1fr 1fr 1fr 1fr  ;
   }
   
 }
