@@ -61,8 +61,56 @@ body {
   line-height: 1.5;
   color: #d1e9ff;
   text-align: left;
-  background-color: #000000;
+  background-color: #222222
 }
+
+
+
+.education {
+  
+  background:  #f9fbfd;
+  padding-top:  50px;
+}
+.education h2,
+.education h4,
+.education h6,
+.education h3 {
+    color: #000; /* Set the color to black */
+}
+
+.education-horizontal-timeline {
+  padding: 80px 0;
+}
+
+/*.education-horizontal-timeline*/
+.education-horizontal-timeline .col-sm-4 {padding:0 2px;}
+
+.single-horizontal-timeline .experience-time h3{text-transform: capitalize;}
+.single-horizontal-timeline .experience-time h3 span{text-transform:lowercase;}
+.single-horizontal-timeline .timeline-content h5 {margin: 15px 0;}
+.single-horizontal-timeline p {color: #999fb3;max-width: 335px;}
+
+/*.timeline-horizontal-border*/
+.timeline-horizontal-border {
+  display:  flex;
+  align-items: center;
+  padding: 26px 0 30px;
+}
+.timeline-horizontal-border i {
+  font-size:  10px;
+  color:  #87c0f9;
+  margin-right:  5px;
+}
+span.single-timeline-horizontal {
+  display:  inline-block;
+  background: #b2c1ce;
+  height:  1px;
+  width: 100%
+}
+span.single-timeline-horizontal.spacial-horizontal-line {width: 100px;}
+
+
+
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
@@ -83,6 +131,23 @@ p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+
+.download-cv-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0074D9;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px; /* Adjust the margin as needed */
+  cursor: pointer;
+}
+
+.download-cv-button:hover {
+  background-color: #0056b3; /* Change color on hover */
+}
+
 
 abbr[title],
 abbr[data-original-title] {
@@ -648,7 +713,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 1140px;
+    max-width: 1500px;
   }
 }
 

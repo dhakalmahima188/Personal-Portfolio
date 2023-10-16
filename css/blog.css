@@ -13,14 +13,38 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: 'Open Sans';
-  background: #fafafa;
+  /* background: #fafafa; */
 }
 
 a {
   color: inherit;
 }
 
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
 .cards-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  white-space: nowrap;
+  padding: 4rem;
+}
+
+.card-grid-space {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  margin-right: 20px; /* Adjust the spacing between cards as needed */
+}
+
+
+
+/* Style your cards and content here */
+
+
+/* .cards-wrapper {
   display: grid;
   justify-content: center;
   align-items: center;
@@ -29,15 +53,16 @@ a {
   padding: 4rem;
   margin: 0 auto;
   width: max-content;
-}
+} */
 
 .card {
+  scroll-snap-type: x mandatory;
   font-family: 'Heebo';
   --bg-filter-opacity: 0.5;
   background-color: cyan;
   background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
-  height: 20em;
-  width: 17em;
+  height: 15em;
+  width: 13em;
   font-size: 1.5em;
   color: rgb(240, 228, 228);
   border-radius: 0.5em;
@@ -63,12 +88,18 @@ a {
   margin: 0;
   font-size: 0.75em;
   line-height: 1.2em;
+  position: absolute;
+  bottom: 65px; /* Adjust the distance from the bottom as needed */
+  left: 10px;
 }
 
 .card p {
   font-size: 0.7em;
   font-family: 'Open Sans';
-  margin-top: 0.5em;
+  position: absolute;
+  bottom: 28px; /* Adjust the distance from the bottom as needed */
+  left: 10px;
+  /* margin-top: 0.5em; */
   /* line-height: 2em; */
 }
 
@@ -78,12 +109,15 @@ a {
 
 .card .tags .tag {
   font-size: 0.75em;
-  background: rgba(255,255,255,0.5);
+  background: rgba(106, 109, 114, 0.5);
   border-radius: 0.3rem;
   padding: 0 0.5em;
   margin-right: 0.5em;
   line-height: 1.5em;
   transition: all, var(--transition-time);
+  position: absolute;
+  bottom: 10px; /* Adjust the distance from the bottom as needed */
+  left: 10px;
 }
 
 /* .card:hover .tags .tag {
@@ -185,3 +219,34 @@ a {
   .info h1 {
     margin: 0;
   }}
+
+
+  .projects .cards {
+    scroll-snap-type: x mandatory;
+    font-family: 'Heebo';
+    --bg-filter-opacity: 0.5;
+    background-color: rgb(49, 71, 71);
+   
+    height: 10em;
+    width: 15em;
+    font-size: 1.5em;
+    color: rgb(240, 228, 228);
+    border-radius: 0.5em;
+    padding: 0.5em;
+    /*margin: 2em;*/
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    /* box-shadow: 0 0 5em -1em black; */
+    /* transition: all, var(--transition-time); */
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgb(20, 157, 220);
+    text-decoration: none;
+
+  }
+
+  .project-desc{
+    font-size: 10px;
+  }
