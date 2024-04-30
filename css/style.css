@@ -230,10 +230,10 @@ a {
   background-color: transparent;
 }
 
-a:hover {
+/* a:hover {
   color: #078571;
   text-decoration: underline;
-}
+} */
 
 a:not([href]):not([class]) {
   color: inherit;

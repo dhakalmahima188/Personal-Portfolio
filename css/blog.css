@@ -109,7 +109,7 @@ a {
 
 .card .tags .tag {
   font-size: 0.75em;
-  background: rgba(106, 109, 114, 0.5);
+  background: rgba(56, 58, 63, 0.5); 
   border-radius: 0.3rem;
   padding: 0 0.5em;
   margin-right: 0.5em;
@@ -120,10 +120,7 @@ a {
   left: 10px;
 }
 
-/* .card:hover .tags .tag {
-  background: var(--color);
-  color: white;
-} */
+
 
 .card .date {
   position: absolute;
@@ -133,6 +130,7 @@ a {
   padding: 1em;
   line-height: 1em;
   opacity: .8;
+  
 }
 
 
