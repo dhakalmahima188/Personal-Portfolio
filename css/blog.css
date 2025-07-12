@@ -31,6 +31,7 @@ a {
   scroll-snap-type: x mandatory;
   white-space: nowrap;
   padding: 4rem;
+  color:white
 }
 
 .card-grid-space {
@@ -58,10 +59,10 @@ a {
 .card {
   scroll-snap-type: x mandatory;
   font-family: 'Heebo';
-  --bg-filter-opacity: 0.5;
-  background-color: cyan;
+  --bg-filter-opacity: 0.8;
+  background-color: #51087E;
   background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
-  height: 15em;
+  height: 10em;
   width: 13em;
   font-size: 1.5em;
   color: rgb(240, 228, 228);
@@ -76,7 +77,7 @@ a {
   /* transition: all, var(--transition-time); */
   position: relative;
   overflow: hidden;
-  border: 2px solid rgb(20, 157, 220);
+  border: 2px solid rgb(138, 42, 235);
   text-decoration: none;
 }
 /* 
@@ -218,12 +219,16 @@ a {
     margin: 0;
   }}
 
+  .projects{
+    background-color: white;
+  }
+
 
   .projects .cards {
     scroll-snap-type: x mandatory;
     font-family: 'Heebo';
     --bg-filter-opacity: 0.5;
-    background-color: rgb(49, 71, 71);
+    background-color: #51087E;
    
     height: 10em;
     width: 15em;
@@ -240,7 +245,7 @@ a {
     /* transition: all, var(--transition-time); */
     position: relative;
     overflow: hidden;
-    border: 1px solid rgb(20, 157, 220);
+    border: 1px solid #be76ea;
     text-decoration: none;
 
   }
