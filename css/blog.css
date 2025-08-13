@@ -216,3 +216,12 @@ a {
 .project-desc {
   font-size: 10px;
 }
+.qualification li {
+  font-size: 14px;
+}
+.qualification h5 {
+  font-size: 17px;
+}
+.qualification strong {
+  font-size: 13px;
+}
