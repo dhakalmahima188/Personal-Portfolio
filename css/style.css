@@ -11332,8 +11332,14 @@ h6,
   padding: 0;
   list-style-type: none;
 }
+.skills-wrapper {
+  display: flex;
+  justify-content: center;
 
-.skillsn-wrapper {
+  /* width: max-content; */
+}
+
+/* .skillsn-wrapper {
   display: grid;
   justify-content: center;
   align-items: center;
@@ -11343,7 +11349,7 @@ h6,
   margin: 0 auto;
   width: max-content;
   border-color: #51087e;
-}
+} */
 
 .projectdesc {
   font-size: 0.6em;
@@ -11354,25 +11360,18 @@ h6,
   font-family: "Heebo";
   --bg-filter-opacity: 0.5;
   background-color: white;
-
-  height: 4em;
-  width: 4em;
-  font-size: 1.5em;
+  height: 5em;
+  width: 5em;
   color: rgb(240, 228, 228);
   border-radius: 1em;
   padding: 0.2em;
-  /*margin: 2em;*/
-  display: flex;
-  align-items: flex-end;
-  background-size: cover;
-  background-position: center;
-  /* box-shadow: 0 0 5em -1em black; */
-  /* transition: all, var(--transition-time); */
-  position: relative;
-  overflow: hidden;
   border: 2px solid #a23de1;
-  text-decoration: none;
 }
+
+.each-card {
+  margin: 5px;
+}
+
 /* Set the width and height of the carousel */
 #carouselExampleIndicators {
   width: 70%;
@@ -11399,27 +11398,6 @@ h6,
   z-index: 2;
 }
 
-@media screen and (max-width: 1285px) {
-  .skillsn-wrapper {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .skillsn-wrapper {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .skillsn-wrapper {
-    padding: 4rem 2rem;
-  }
-
-  .skillsn {
-    max-width: calc(100vw - 4rem);
-  }
-}
 @media (max-width: 767px) {
   #carouselExampleIndicators .carousel-inner .carousel-item img {
     height: 500px;
