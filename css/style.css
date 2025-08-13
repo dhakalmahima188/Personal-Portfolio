@@ -89,10 +89,7 @@ body {
   color: white;
 }
 
-.education h4 {
-  color: #999fb3;
-}
-
+.education h4 ,
 .education h2,
 .education h6,
 .education h3 {
@@ -11367,6 +11364,8 @@ h6,
   padding: 0.2em;
   border: 2px solid #a23de1;
 }
+
+
 
 .p-cards {
   scroll-snap-type: x mandatory;
