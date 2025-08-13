@@ -536,7 +536,7 @@ h4,
 
 h5,
 .h5 {
-  font-size: 1.25rem;
+  font-size: 1.20rem;
 }
 
 h6,
@@ -11368,11 +11368,24 @@ h6,
   border: 2px solid #a23de1;
 }
 
-.each-card {
+.p-cards {
+  scroll-snap-type: x mandatory;
+  font-family: "Heebo";
+  --bg-filter-opacity: 0.8;
+  background-color: #51087e;
+  height: 10em;
+  width: 10em;
+  font-size: 1.5em;
+  color: rgb(240, 228, 228);
+  border-radius: 0.5em;
+  padding: 1em;
+  display: flex;
+  align-items: end;
+  position: relative;
+  overflow: hidden;
   margin: 5px;
 }
 
-/* Set the width and height of the carousel */
 #carouselExampleIndicators {
   width: 70%;
   height: 700px;
