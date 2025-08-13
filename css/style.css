@@ -11373,6 +11373,31 @@ h6,
   border: 2px solid #a23de1;
   text-decoration: none;
 }
+/* Set the width and height of the carousel */
+#carouselExampleIndicators {
+  width: 70%;
+  height: 700px;
+  margin: 0 auto;
+  background-color: #51087e;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 700px;
+  opacity: 0.6;
+  object-fit: cover;
+}
+#carouselExampleIndicators .carousel-caption {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  background: rgba(0, 0, 0.1, 0);
+  color: white;
+  padding: 10px;
+  z-index: 2;
+}
 
 @media screen and (max-width: 1285px) {
   .skillsn-wrapper {
@@ -11393,5 +11418,11 @@ h6,
 
   .skillsn {
     max-width: calc(100vw - 4rem);
+  }
+}
+@media (max-width: 767px) {
+  #carouselExampleIndicators .carousel-inner .carousel-item img {
+    height: 500px;
+    width: 100%;
   }
 }
