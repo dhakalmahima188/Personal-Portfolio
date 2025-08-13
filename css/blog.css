@@ -13,7 +13,6 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: "Open Sans";
-  /* background: #fafafa; */
 }
 
 a {
@@ -37,21 +36,8 @@ a {
 .card-grid-space {
   flex: 0 0 auto;
   scroll-snap-align: start;
-  margin-right: 20px; /* Adjust the spacing between cards as needed */
+  margin-right: 20px;
 }
-
-/* Style your cards and content here */
-
-/* .cards-wrapper {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: 1fr 1fr 1fr  ;
-  grid-gap: 4rem;
-  padding: 4rem;
-  margin: 0 auto;
-  width: max-content;
-} */
 
 .card {
   scroll-snap-type: x mandatory;
@@ -69,29 +55,24 @@ a {
   color: rgb(240, 228, 228);
   border-radius: 0.5em;
   padding: 1em;
-  /*margin: 2em;*/
+
   display: flex;
   align-items: flex-end;
   background-size: cover;
   background-position: center;
-  /* box-shadow: 0 0 5em -1em black; */
-  /* transition: all, var(--transition-time); */
+
   position: relative;
   overflow: hidden;
   border: 2px solid rgb(138, 42, 235);
   text-decoration: none;
 }
-/* 
-.card:hover {
-  transform: rotate(0);
-} */
 
 .card h1 {
   margin: 0;
   font-size: 0.75em;
   line-height: 1.2em;
   position: absolute;
-  bottom: 65px; /* Adjust the distance from the bottom as needed */
+  bottom: 65px;
   left: 10px;
 }
 
@@ -99,10 +80,8 @@ a {
   font-size: 0.7em;
   font-family: "Open Sans";
   position: absolute;
-  bottom: 28px; /* Adjust the distance from the bottom as needed */
+  bottom: 28px;
   left: 10px;
-  /* margin-top: 0.5em; */
-  /* line-height: 2em; */
 }
 
 .card .tags {
@@ -118,7 +97,7 @@ a {
   line-height: 1.5em;
   transition: all, var(--transition-time);
   position: absolute;
-  bottom: 10px; /* Adjust the distance from the bottom as needed */
+  bottom: 10px;
   left: 10px;
 }
 
@@ -143,14 +122,6 @@ a {
   width: 250%;
   height: 250%;
 }
-
-/* .card:hover {
-  color: var(--color);
-} */
-
-/* .card:hover:before, .card:hover:after {
-  transform: scale(1);
-} */
 
 .card-grid-space .num {
   font-size: 0.75em;
