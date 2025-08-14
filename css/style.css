@@ -11410,9 +11410,4 @@ h6,
   z-index: 2;
 }
 
-@media (max-width: 767px) {
-  #carouselExampleIndicators .carousel-inner .carousel-item img {
-    height: 500px;
-    width: 100%;
-  }
-}
+
