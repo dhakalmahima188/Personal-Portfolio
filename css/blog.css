@@ -166,6 +166,105 @@ a {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .card {
+    height: 8.5em;
+    width: 11em;
+    font-size: 1.2em;
+    padding: 0.8em;
+  }
+  
+  .card h1 {
+    font-size: 0.65em;
+    bottom: 55px;
+  }
+  
+  .card p {
+    font-size: 0.6em;
+    bottom: 23px;
+  }
+  
+  .card .tags .tag {
+    font-size: 0.65em;
+    padding: 0 0.4em;
+  }
+  
+  .card .date {
+    font-size: 0.45em;
+    padding: 0.8em;
+  }
+  
+  .card-grid-space {
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    height: 8em;
+    width: 10.5em;
+    font-size: 1.1em;
+    padding: 0.7em;
+  }
+  
+  .card h1 {
+    font-size: 0.6em;
+    bottom: 50px;
+  }
+  
+  .card p {
+    font-size: 0.55em;
+    bottom: 20px;
+  }
+  
+  .card .tags .tag {
+    font-size: 0.6em;
+    padding: 0 0.35em;
+  }
+  
+  .card .date {
+    font-size: 0.4em;
+    padding: 0.7em;
+  }
+  
+  .card-grid-space {
+    margin-right: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    height: 7.5em;
+    width: 10em;
+    font-size: 1em;
+    padding: 0.6em;
+  }
+  
+  .card h1 {
+    font-size: 0.55em;
+    bottom: 45px;
+  }
+  
+  .card p {
+    font-size: 0.5em;
+    bottom: 18px;
+  }
+  
+  .card .tags .tag {
+    font-size: 0.55em;
+    padding: 0 0.3em;
+  }
+  
+  .card .date {
+    font-size: 0.35em;
+    padding: 0.6em;
+  }
+  
+  .card-grid-space {
+    margin-right: 10px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .cards-wrapper {
     padding: 4rem 2rem;

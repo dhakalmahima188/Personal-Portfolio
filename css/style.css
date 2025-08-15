@@ -118,16 +118,59 @@ body {
   max-width: 335px;
 }
 
+/* Timeline structure styles */
+.timeline-container {
+  position: relative;
+  padding: 40px 0;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: white;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-point {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.timeline-point i {
+  font-size: 12px;
+  color: white;
+  background: #51087e;
+  border-radius: 50%;
+  padding: 4px;
+  z-index: 3;
+  position: relative;
+}
+
+/* Original timeline styles (for backward compatibility) */
 .timeline-horizontal-border {
   display: flex;
   align-items: center;
   padding: 26px 0px 26px;
+  position: relative;
 }
 
 .timeline-horizontal-border i {
   font-size: 10px;
   color: white;
   margin-right: 5px;
+  z-index: 2;
+  position: relative;
 }
 
 span.single-timeline-horizontal {
@@ -135,10 +178,84 @@ span.single-timeline-horizontal {
   background: white;
   height: 1px;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 span.single-timeline-horizontal.spacial-horizontal-line {
   width: 100px;
+}
+
+/* Responsive styles for education timeline */
+@media (max-width: 768px) {
+  .education-horizontal-timeline .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .education-horizontal-timeline .row > div {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 30px;
+  }
+  
+  .timeline-horizontal-border {
+    padding: 20px 0px 20px;
+    justify-content: center;
+  }
+  
+  .timeline-horizontal-border i:first-child {
+    margin-right: 10px;
+  }
+  
+  .timeline-horizontal-border i:last-child {
+    margin-left: 10px;
+  }
+  
+  span.single-timeline-horizontal {
+    width: 80%;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .education-horizontal-timeline .row > div {
+    max-width: 350px;
+    margin-bottom: 25px;
+  }
+  
+  .timeline-horizontal-border {
+    padding: 15px 0px 15px;
+  }
+  
+  span.single-timeline-horizontal {
+    width: 70%;
+    max-width: 150px;
+  }
+  
+  .timeline-horizontal-border i {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-horizontal-timeline .row > div {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .timeline-horizontal-border {
+    padding: 12px 0px 12px;
+  }
+  
+  span.single-timeline-horizontal {
+    width: 60%;
+    max-width: 120px;
+  }
+  
+  .timeline-horizontal-border i {
+    font-size: 7px;
+  }
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -11332,7 +11449,10 @@ h6,
 .skills-wrapper {
   display: flex;
   justify-content: center;
-
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 1500px;
+  margin: 0 auto;
   /* width: max-content; */
 }
 
@@ -11372,8 +11492,8 @@ h6,
   font-family: "Heebo";
   --bg-filter-opacity: 0.8;
   background-color: #51087e;
-  height: 10em;
-  width: 10em;
+  height: 9em;
+  width: 9em;
   font-size: 1.5em;
   color: rgb(240, 228, 228);
   border-radius: 0.5em;
@@ -11382,7 +11502,179 @@ h6,
   align-items: end;
   position: relative;
   overflow: hidden;
-  margin: 5px;
+  margin: 0;
+  flex-shrink: 0;
+}
+.p-cards h5 {
+  font-size: 0.7em;
+
+}
+.p-cards .btn.py-2 {
+  padding-top: 0.1em !important;
+  padding-bottom: 0.2em !important;
+}
+
+.p-cards .btn i {
+  font-size: 0.8em;
+}
+
+/* Responsive styles for project cards and skills */
+@media (max-width: 1200px) {
+  .skills-wrapper {
+    max-width: 1000px;
+    gap: 12px;
+  }
+  
+  .p-cards {
+    width: 8.5em;
+    height: 8.5em;
+  }
+  .p-cards h5 {
+    font-size: 0.75em;
+    line-height: 1.1;
+    margin-bottom: 0.3em;
+  }
+}
+
+@media (max-width: 768px) {
+  .p-cards {
+    width: 9em;
+    height: 9em;
+    font-size: 1.1em;
+    padding: 0.8em;
+  }
+  
+  .p-cards h5 {
+    font-size: 0.75em;
+    line-height: 1.1;
+    margin-bottom: 0.3em;
+  }
+  
+  .p-cards .btn {
+    font-size: 0.7em !important;
+    padding: 0.2em 0.4em !important;
+    height: auto !important;
+    line-height: 1.2 !important;
+    min-height: auto !important;
+  }
+  
+  .p-cards .btn.py-2 {
+    padding-top: 0.2em !important;
+    padding-bottom: 0.2em !important;
+  }
+  
+  .p-cards .btn i {
+    font-size: 0.8em;
+  }
+  
+  .projectdesc {
+    font-size: 0.45em;
+    margin-bottom: 0.4em;
+  }
+  
+  .skillsn {
+    height: 4.5em;
+    width: 4.5em;
+  }
+  
+  .skills-wrapper {
+    justify-content: center;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .p-cards {
+    width: 8.5em;
+    height: 8.5em;
+    font-size: 1em;
+    padding: 0.7em;
+  }
+  
+  .p-cards h5 {
+    font-size: 0.65em;
+    line-height: 1.1;
+    margin-bottom: 0.25em;
+  }
+  
+  .p-cards .btn {
+    font-size: 0.6em !important;
+    padding: 0.15em 0.3em !important;
+    height: auto !important;
+    line-height: 1.2 !important;
+    min-height: auto !important;
+  }
+  
+  .p-cards .btn.py-2 {
+    padding-top: 0.15em !important;
+    padding-bottom: 0.15em !important;
+  }
+  
+  .p-cards .btn i {
+    font-size: 0.7em;
+  }
+  
+  .projectdesc {
+    font-size: 0.4em;
+    margin-bottom: 0.35em;
+  }
+  
+  .skillsn {
+    height: 4em;
+    width: 4em;
+  }
+  
+  .skills-wrapper {
+    justify-content: center;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .p-cards {
+    width: 8em;
+    height: 8em;
+    font-size: 0.9em;
+    padding: 0.6em;
+  }
+  
+  .p-cards h5 {
+    font-size: 0.6em;
+    line-height: 1.1;
+    margin-bottom: 0.2em;
+  }
+  
+  .p-cards .btn {
+    font-size: 0.55em !important;
+    padding: 0.1em 0.25em !important;
+    height: auto !important;
+    line-height: 1.2 !important;
+    min-height: auto !important;
+  }
+  
+  .p-cards .btn.py-2 {
+    padding-top: 0.1em !important;
+    padding-bottom: 0.1em !important;
+  }
+  
+  .p-cards .btn i {
+    font-size: 0.65em;
+  }
+  
+  .projectdesc {
+    font-size: 0.35em;
+    margin-bottom: 0.3em;
+  }
+  
+  .skillsn {
+    height: 3.5em;
+    width: 3.5em;
+  }
+  
+  .skills-wrapper {
+    justify-content: center;
+    gap: 5px;
+  }
 }
 
 #carouselExampleIndicators {
@@ -11398,16 +11690,116 @@ h6,
   opacity: 0.6;
   object-fit: cover;
 }
+
 #carouselExampleIndicators .carousel-caption {
   position: absolute;
   bottom: 0px;
   left: 0px;
   right: 0px;
-
   background: rgba(0, 0, 0.1, 0);
   color: white;
   padding: 10px;
   z-index: 2;
+}
+
+/* Responsive styles for moments carousel */
+@media (max-width: 1200px) {
+  #carouselExampleIndicators {
+    width: 80%;
+    height: 600px;
+  }
+  
+  #carouselExampleIndicators .carousel-inner .carousel-item img {
+    height: 600px;
+  }
+}
+
+@media (max-width: 992px) {
+  #carouselExampleIndicators {
+    width: 85%;
+    height: 500px;
+  }
+  
+  #carouselExampleIndicators .carousel-inner .carousel-item img {
+    height: 500px;
+  }
+  
+  #carouselExampleIndicators .carousel-caption h5 {
+    font-size: 1.1em;
+  }
+  
+  #carouselExampleIndicators .carousel-caption p {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 768px) {
+  #carouselExampleIndicators {
+    width: 90%;
+    height: 400px;
+  }
+  
+  #carouselExampleIndicators .carousel-inner .carousel-item img {
+    height: 400px;
+  }
+  
+  #carouselExampleIndicators .carousel-caption {
+    padding: 8px;
+  }
+  
+  #carouselExampleIndicators .carousel-caption h5 {
+    font-size: 1em;
+  }
+  
+  #carouselExampleIndicators .carousel-caption p {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 576px) {
+  #carouselExampleIndicators {
+    width: 95%;
+    height: 350px;
+  }
+  
+  #carouselExampleIndicators .carousel-inner .carousel-item img {
+    height: 350px;
+  }
+  
+  #carouselExampleIndicators .carousel-caption {
+    padding: 6px;
+  }
+  
+  #carouselExampleIndicators .carousel-caption h5 {
+    font-size: 0.9em;
+  }
+  
+  #carouselExampleIndicators .carousel-caption p {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 480px) {
+  #carouselExampleIndicators {
+    width: 98%;
+    height: 300px;
+  }
+  
+  #carouselExampleIndicators .carousel-inner .carousel-item img {
+    height: 300px;
+  }
+  
+  #carouselExampleIndicators .carousel-caption {
+    padding: 5px;
+  }
+  
+  #carouselExampleIndicators .carousel-caption h5 {
+    font-size: 0.8em;
+  }
+  
+  #carouselExampleIndicators .carousel-caption p {
+    font-size: 0.6em;
+  }
 }
 
 
