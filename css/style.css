@@ -11483,6 +11483,36 @@ h6,
 .experience-time{
   margin-top: 20px;
 }
+
+/* Experience section responsive fonts for small screens */
+@media (max-width: 575px) {
+  .qualification h5 {
+    font-size: 0.5em;
+    margin-bottom: 0.1em;
+  }
+  
+  .qualification strong {
+    font-size: 0.65em;
+  }
+  
+  .qualification small {
+    font-size: 0.6em;
+  }
+  
+  .qualification ul li {
+    font-size: 0.6em;
+    line-height: 1.2;
+    margin-bottom: 0.3em;
+  }
+  
+  .qualification .position-relative {
+    margin-bottom: 1.5em;
+  }
+  
+  .qualification p.mb-2 {
+    margin-bottom: 0.5em !important;
+  }
+}
   
   .education-horizontal-timeline {
     position: relative;
@@ -11657,14 +11687,14 @@ h6,
 
 @media (max-width: 480px) {
   .p-cards {
-    width: 8em;
+    width: 10em;
     height: 8em;
     font-size: 0.9em;
     padding: 0.6em;
   }
 
   .p-cards h5 {
-    font-size: 0.6em;
+    font-size: 0.7em;
     line-height: 1.1;
     margin-bottom: 0.2em;
   }
