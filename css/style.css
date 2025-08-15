@@ -83,13 +83,17 @@ body {
   color: #51087e;
 }
 
+
 .education {
   background: #51087e;
   padding-top: 50px;
   color: white;
 }
 
-.education h4 ,
+.education h4 {
+  color: #999fb3;
+}
+
 .education h2,
 .education h6,
 .education h3 {
@@ -118,59 +122,16 @@ body {
   max-width: 335px;
 }
 
-/* Timeline structure styles */
-.timeline-container {
-  position: relative;
-  padding: 40px 0;
-}
-
-.timeline-line {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: white;
-  z-index: 1;
-  transform: translateY(-50%);
-}
-
-.timeline-item {
-  position: relative;
-  z-index: 2;
-}
-
-.timeline-point {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0;
-}
-
-.timeline-point i {
-  font-size: 12px;
-  color: white;
-  background: #51087e;
-  border-radius: 50%;
-  padding: 4px;
-  z-index: 3;
-  position: relative;
-}
-
-/* Original timeline styles (for backward compatibility) */
 .timeline-horizontal-border {
   display: flex;
   align-items: center;
   padding: 26px 0px 26px;
-  position: relative;
 }
 
 .timeline-horizontal-border i {
   font-size: 10px;
   color: white;
   margin-right: 5px;
-  z-index: 2;
-  position: relative;
 }
 
 span.single-timeline-horizontal {
@@ -178,85 +139,12 @@ span.single-timeline-horizontal {
   background: white;
   height: 1px;
   width: 100%;
-  position: relative;
-  z-index: 1;
 }
 
 span.single-timeline-horizontal.spacial-horizontal-line {
   width: 100px;
 }
 
-/* Responsive styles for education timeline */
-@media (max-width: 768px) {
-  .education-horizontal-timeline .row {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .education-horizontal-timeline .row > div {
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 30px;
-  }
-  
-  .timeline-horizontal-border {
-    padding: 20px 0px 20px;
-    justify-content: center;
-  }
-  
-  .timeline-horizontal-border i:first-child {
-    margin-right: 10px;
-  }
-  
-  .timeline-horizontal-border i:last-child {
-    margin-left: 10px;
-  }
-  
-  span.single-timeline-horizontal {
-    width: 80%;
-    max-width: 200px;
-  }
-}
-
-@media (max-width: 576px) {
-  .education-horizontal-timeline .row > div {
-    max-width: 350px;
-    margin-bottom: 25px;
-  }
-  
-  .timeline-horizontal-border {
-    padding: 15px 0px 15px;
-  }
-  
-  span.single-timeline-horizontal {
-    width: 70%;
-    max-width: 150px;
-  }
-  
-  .timeline-horizontal-border i {
-    font-size: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  .education-horizontal-timeline .row > div {
-    max-width: 300px;
-    margin-bottom: 20px;
-  }
-  
-  .timeline-horizontal-border {
-    padding: 12px 0px 12px;
-  }
-  
-  span.single-timeline-horizontal {
-    width: 60%;
-    max-width: 120px;
-  }
-  
-  .timeline-horizontal-border i {
-    font-size: 7px;
-  }
-}
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
