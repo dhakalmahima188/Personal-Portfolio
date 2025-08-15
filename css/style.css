@@ -83,7 +83,6 @@ body {
   color: #51087e;
 }
 
-
 .education {
   background: #51087e;
   padding-top: 50px;
@@ -144,7 +143,6 @@ span.single-timeline-horizontal {
 span.single-timeline-horizontal.spacial-horizontal-line {
   width: 100px;
 }
-
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
@@ -538,7 +536,7 @@ h4,
 
 h5,
 .h5 {
-  font-size: 1.20rem;
+  font-size: 1.2rem;
 }
 
 h6,
@@ -11339,7 +11337,7 @@ h6,
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
-  max-width: 1500px;
+  max-width: 1800px;
   margin: 0 auto;
   /* width: max-content; */
 }
@@ -11373,8 +11371,6 @@ h6,
   border: 2px solid #a23de1;
 }
 
-
-
 .p-cards {
   scroll-snap-type: x mandatory;
   font-family: "Heebo";
@@ -11395,7 +11391,6 @@ h6,
 }
 .p-cards h5 {
   font-size: 0.7em;
-
 }
 .p-cards .btn.py-2 {
   padding-top: 0.1em !important;
@@ -11405,14 +11400,18 @@ h6,
 .p-cards .btn i {
   font-size: 0.8em;
 }
+ .education h4 {
+       font-size: 1.2em;
+    
+  }
 
 /* Responsive styles for project cards and skills */
 @media (max-width: 1200px) {
   .skills-wrapper {
-    max-width: 1000px;
+    max-width: 900px;
     gap: 12px;
   }
-  
+
   .p-cards {
     width: 8.5em;
     height: 8.5em;
@@ -11422,22 +11421,154 @@ h6,
     line-height: 1.1;
     margin-bottom: 0.3em;
   }
+  .education h4 {
+       font-size: 1em;
+    
+  }
+}
+
+@media (max-width: 1000px) {
+ 
+  .education h4 {
+       font-size: 0.8em;
+    
+  }
+  .education p {
+       font-size: 0.8em;
+    
+  }
+  .education h5 {
+       font-size: 0.7em;
+    
+  }
+}
+@media (max-width: 700px) {
+
+
+  .education h4 {
+       font-size: 0.7em;
+    
+  }
+   .education h3 {
+       font-size: 0.7em;
+    
+  }
+  .education p {
+       font-size: 0.7em;
+    
+  }
+  .education h5 {
+       font-size: 0.7em;
+    
+  }
+ 
+}
+@media (max-width: 575px) {
+  .education h4 {
+    font-size: 0.8em; /*degree*/
+ 
+}
+.education h3 {
+    font-size: 0.7em; /*date*/
+ 
+}
+.education p {
+    font-size: 0.7em; /*%*/
+ 
+}
+.education h5 {
+    font-size: 0.8em; /*college*/
+ 
+}
+  
+  .education-horizontal-timeline {
+    position: relative;
+    padding: 20px 0 40px 0;
+    overflow: hidden;
+  }
+  
+  .education-horizontal-timeline::before {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 30px;
+    bottom: 30px;
+    width: 2px;
+    background: white;
+    z-index: 1;
+  }
+  
+  .education-horizontal-timeline .row {
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .education-horizontal-timeline .col-sm-4 {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 60px;
+  }
+  
+  .education-horizontal-timeline .col-sm-4:last-child {
+    margin-bottom: 0;
+  }
+  
+  .timeline-horizontal-border {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  
+    .timeline-horizontal-border i {
+    position: relative;
+    background: #51087e;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  span.single-timeline-horizontal {
+    display: none;
+  }
+  
+   .single-horizontal-timeline {
+    text-align: left;
+  }
+  
+  .single-horizontal-timeline .experience-time {
+    margin-bottom: 0px;
+  }
+  
+  .single-horizontal-timeline .timeline {
+    margin-top: 1px;
+  }
 }
 
 @media (max-width: 768px) {
   .p-cards {
-    width: 9em;
-    height: 9em;
+    width: 10em;
+    height: 10em;
     font-size: 1.1em;
     padding: 0.8em;
   }
-  
+
   .p-cards h5 {
     font-size: 0.75em;
     line-height: 1.1;
     margin-bottom: 0.3em;
   }
   
+
   .p-cards .btn {
     font-size: 0.7em !important;
     padding: 0.2em 0.4em !important;
@@ -11445,46 +11576,47 @@ h6,
     line-height: 1.2 !important;
     min-height: auto !important;
   }
-  
+
   .p-cards .btn.py-2 {
     padding-top: 0.2em !important;
     padding-bottom: 0.2em !important;
   }
-  
+
   .p-cards .btn i {
     font-size: 0.8em;
   }
-  
+
   .projectdesc {
     font-size: 0.45em;
     margin-bottom: 0.4em;
   }
-  
+
   .skillsn {
     height: 4.5em;
     width: 4.5em;
   }
-  
+
   .skills-wrapper {
     justify-content: center;
     gap: 8px;
+    max-width: 100%;
   }
 }
 
 @media (max-width: 576px) {
   .p-cards {
-    width: 8.5em;
-    height: 8.5em;
+    width: 12em;
+    height: 10em;
     font-size: 1em;
     padding: 0.7em;
   }
-  
+
   .p-cards h5 {
     font-size: 0.65em;
     line-height: 1.1;
     margin-bottom: 0.25em;
   }
-  
+
   .p-cards .btn {
     font-size: 0.6em !important;
     padding: 0.15em 0.3em !important;
@@ -11492,29 +11624,30 @@ h6,
     line-height: 1.2 !important;
     min-height: auto !important;
   }
-  
+
   .p-cards .btn.py-2 {
     padding-top: 0.15em !important;
     padding-bottom: 0.15em !important;
   }
-  
+
   .p-cards .btn i {
-    font-size: 0.7em;
+    font-size: 0.9em;
   }
-  
+
   .projectdesc {
-    font-size: 0.4em;
+    font-size: 0.5em;
     margin-bottom: 0.35em;
   }
-  
+
   .skillsn {
     height: 4em;
     width: 4em;
   }
-  
+
   .skills-wrapper {
     justify-content: center;
     gap: 6px;
+    max-width: 100%;
   }
 }
 
@@ -11525,13 +11658,13 @@ h6,
     font-size: 0.9em;
     padding: 0.6em;
   }
-  
+
   .p-cards h5 {
     font-size: 0.6em;
     line-height: 1.1;
     margin-bottom: 0.2em;
   }
-  
+
   .p-cards .btn {
     font-size: 0.55em !important;
     padding: 0.1em 0.25em !important;
@@ -11539,26 +11672,26 @@ h6,
     line-height: 1.2 !important;
     min-height: auto !important;
   }
-  
+
   .p-cards .btn.py-2 {
     padding-top: 0.1em !important;
     padding-bottom: 0.1em !important;
   }
-  
+
   .p-cards .btn i {
     font-size: 0.65em;
   }
-  
+
   .projectdesc {
     font-size: 0.35em;
     margin-bottom: 0.3em;
   }
-  
+
   .skillsn {
     height: 3.5em;
     width: 3.5em;
   }
-  
+
   .skills-wrapper {
     justify-content: center;
     gap: 5px;
@@ -11596,7 +11729,7 @@ h6,
     width: 80%;
     height: 600px;
   }
-  
+
   #carouselExampleIndicators .carousel-inner .carousel-item img {
     height: 600px;
   }
@@ -11607,15 +11740,15 @@ h6,
     width: 85%;
     height: 500px;
   }
-  
+
   #carouselExampleIndicators .carousel-inner .carousel-item img {
     height: 500px;
   }
-  
+
   #carouselExampleIndicators .carousel-caption h5 {
     font-size: 1.1em;
   }
-  
+
   #carouselExampleIndicators .carousel-caption p {
     font-size: 0.9em;
   }
@@ -11626,19 +11759,19 @@ h6,
     width: 90%;
     height: 400px;
   }
-  
+
   #carouselExampleIndicators .carousel-inner .carousel-item img {
     height: 400px;
   }
-  
+
   #carouselExampleIndicators .carousel-caption {
     padding: 8px;
   }
-  
+
   #carouselExampleIndicators .carousel-caption h5 {
     font-size: 1em;
   }
-  
+
   #carouselExampleIndicators .carousel-caption p {
     font-size: 0.8em;
   }
@@ -11649,19 +11782,19 @@ h6,
     width: 95%;
     height: 350px;
   }
-  
+
   #carouselExampleIndicators .carousel-inner .carousel-item img {
     height: 350px;
   }
-  
+
   #carouselExampleIndicators .carousel-caption {
     padding: 6px;
   }
-  
+
   #carouselExampleIndicators .carousel-caption h5 {
     font-size: 0.9em;
   }
-  
+
   #carouselExampleIndicators .carousel-caption p {
     font-size: 0.7em;
   }
@@ -11672,22 +11805,20 @@ h6,
     width: 98%;
     height: 300px;
   }
-  
+
   #carouselExampleIndicators .carousel-inner .carousel-item img {
     height: 300px;
   }
-  
+
   #carouselExampleIndicators .carousel-caption {
     padding: 5px;
   }
-  
+
   #carouselExampleIndicators .carousel-caption h5 {
     font-size: 0.8em;
   }
-  
+
   #carouselExampleIndicators .carousel-caption p {
     font-size: 0.6em;
   }
 }
-
-
