@@ -1,868 +1,928 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Mahima Dhakal</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link href="img/favicon.ico" rel="icon" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahima Dhakal — Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=Noto+Serif+Devanagari:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
-    />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/blog.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha384-oCEkF4LQY5V5cxAzk9ry9futWw+Rwplc6vC3cT0F/ii/1U6YgW4sS9UtiGz6LR4En"
-      crossorigin="anonymous"
     />
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="./v2/css/style.css" />
   </head>
-
-  <body data-spy="scroll" data-target=".navbar" data-offset="51">
-    <nav
-      class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5"
-    >
-      <a href="index.html" class="navbar-brand ml-lg-3">
-        <h1 class="m-0 display-5">
-          <span class="text-primaryss">Mahima</span>Dhakal
-        </h1>
-      </a>
-      <button
-        type="button"
-        class="navbar-toggler"
-        data-toggle="collapse"
-        data-target="#navbarCollapse"
-      >
-        <span class="navbar-toggler-icon"></span>
+  <body>
+    <nav id="navbar" class="hidden">
+      <a href="#hero" class="nav-logo">mahima<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Work</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blogs">Blogs</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#moments">Moments</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
       </button>
-      <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
-        <div class="navbar-nav m-auto py-0">
-          <a href="#home" class="nav-item nav-link active">Home</a>
-          <a href="#about" class="nav-item nav-link">About</a>
-          <a href="#education" class="nav-item nav-link">Education</a>
-          <a href="#experience" class="nav-item nav-link">Experience</a>
-          <a href="#skill" class="nav-item nav-link">Skills</a>
-          <a href="#projects" class="nav-item nav-link">Projects</a>
-          <a href="#blogs" class="nav-item nav-link">Blogs</a>
-          <a href="#portfolio" class="nav-item nav-link">Moments</a>
-          <a href="#contact" class="nav-item nav-link">Contact</a>
-        </div>
-      </div>
     </nav>
 
-    <div
-      class="container-fluid bg-primary d-flex align-items-center"
-      id="home"
-      style="min-height: 100vh"
-    >
-      <div class="container">
-        <div class="col-lg-7 text-center text-lg-left">
-          <h3 class="text-white font-weight-normal mb-3">I'm</h3>
-          <h1
-            class="display-3 text-uppercase text-primarys mb-2"
-            style="-webkit-text-stroke: 1px #ffffff"
-          >
-            Mahima Dhakal
-          </h1>
-          <h1
-            class="typed-text-output d-inline font-weight-lighter text-white"
-          ></h1>
-          <div class="typed-text d-none">
-            <h3>Tech Enthusiast, Software Engineer, Happy</h3>
-          </div>
-        </div>
-        <div class="col-lg-7 text-center text-lg-left">
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" onclick="closeMenu()">About</a>
+      <a href="#education" onclick="closeMenu()">Education</a>
+      <a href="#experience" onclick="closeMenu()">Work</a>
+      <a href="#community" onclick="closeMenu()">Community</a>
+      <a href="#awards" onclick="closeMenu()">Awards</a>
+      <a href="#skills" onclick="closeMenu()">Skills</a>
+      <a href="#projects" onclick="closeMenu()">Projects</a>
+      <a href="#blogs" onclick="closeMenu()">Blogs</a>
+      <a href="#hobbies" onclick="closeMenu()">Hobbies</a>
+      <a href="#moments" onclick="closeMenu()">Moments</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
+    </div>
+
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <p class="hero-greeting">hello, i'm</p>
+        <h1 class="hero-name">Mahima Dhakal</h1>
+        <p class="hero-tagline">
+          I am Software Engineer crafting meaningful technical solutions driven
+          by curiosity, code & a love for knowledge sharing.
+        </p>
+        <div class="hero-cta">
           <a
-            href="./img/mahima_dhakal_CV_2025.pdf"
+            href="./v2/file/europass_cv_mahima_2025.pdf"
             download
-            class="download-cv-button"
+            class="btn-primary-custom"
           >
-            <i class="fas fa-file-download"></i> CV</a
-          >
+            <i class="fas fa-arrow-down"></i> Download CV
+          </a>
+          <a href="#contact" class="btn-ghost">
+            <i class="far fa-paper-plane"></i> Say Hello
+          </a>
         </div>
       </div>
-    </div>
+      <div class="scroll-hint">
+        <button
+          class="scroll-btn"
+          onclick="
+            document
+              .getElementById('about')
+              .scrollIntoView({ behavior: 'smooth' })
+          "
+        >
+          <i class="fas fa-chevron-down"></i>
+        </button>
+      </div>
+    </section>
 
-    <div class="container-fluid py-5 about" id="about">
-      <div class="container">
-        <!-- <div class="position-relative d-flex align-items-center justify-content-center">
-                <h2 style="color:white"> ABOUT</h2>
-            </div> -->
-        <div class="row align-items-center">
-          <div class="col-lg-3 d-flex justify-content-center">
-            <img class="img-fluids rounded w-80" src="img/profile.png" alt="" />
+    <section class="about-section" id="about">
+      <div class="about-grid reveal">
+        <div class="about-image-wrap">
+          <img
+            src="v2/img/profile.png"
+            alt="Mahima Dhakal"
+            class="about-image"
+          />
+        </div>
+        <div class="about-text">
+          <p class="section-label">About Me</p>
+          <h3>Passionate about building things that matter</h3>
+          <p>
+            I am a computer engineering graduate passionate about uncovering and
+            sharing innovative ideas, with a creative spirit and a curiosity
+            that drives me to explore various fields of knowledge. I'm less
+            fearful of new experiences and more open to trying new things
+          </p>
+
+          <div class="about-details">
+            <div class="about-detail">
+              <i class="fas fa-envelope"></i>
+              <span>dhakalmahima18@gmail.com</span>
+            </div>
+
+            <div class="about-detail">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Rupandehi, Nepal</span>
+            </div>
           </div>
-          <div class="col-lg-8">
-            <h3 class="mb-4" style="color: #51087e">Software Engineer</h3>
-            <p style="color: #51087e">
-              I am a passionate and driven Software Engineer with a deep
-              interest in solving complex problems using TECH and have a mindset
-              for continuous learning that drives me to explore various fields
-              of knowledge.
+          <div class="about-badges">
+            <span class="about-badge"
+              ><i class="fab fa-node-js"></i> Developer</span
+            >
+            <span class="about-badge"
+              ><i class="fas fa-female"></i> Women in Tech Advocate</span
+            >
+
+            <span class="about-badge"
+              ><i class="fas fa-language"></i> Nepali · English (C1)</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="education-section" id="education">
+      <div class="section-header center reveal">
+        <p class="section-label">Education</p>
+        <h2 class="section-title">Where I Learned</h2>
+      </div>
+      <div class="edu-timeline">
+        <div class="edu-item reveal">
+          <div class="edu-dot"><i class="fas fa-graduation-cap"></i></div>
+          <div class="edu-card">
+            <p class="edu-year">2019 — 2024</p>
+            <h4 class="edu-degree">Bachelors in Computer Engineering</h4>
+            <p class="edu-school">
+              Tribhuvan University, IOE — Pulchowk Campus, Lalitpur
             </p>
-            <div class="row mb-3">
-              <div class="col-sm-6 py-2">
-                <h6 class="text-secondary">
-                  <i class="fa fa-envelope" style="color: #999fb3"></i>
-                  dhakalmahima18@gmail.com
-                </h6>
-              </div>
-              <div class="col-sm-6 py-2">
-                <h6>
-                  <i class="fa fa-address-card-o" style="color: #999fb3"></i
-                  ><span class="text-secondary">
-                    Suddhodhan-4, Pharsatikar, Rupandehi</span
-                  >
-                </h6>
-              </div>
-            </div>
+            <span class="edu-grade">Cum Laude · 82.44% · Top 10% of batch</span>
+          </div>
+        </div>
+        <div class="edu-item reveal">
+          <div class="edu-dot"><i class="fas fa-book"></i></div>
+          <div class="edu-card">
+            <p class="edu-year">2017 — 2019</p>
+            <h4 class="edu-degree">Major in Physics & Mathematics</h4>
+            <p class="edu-school">Tilottama Secondary School, Yogikuti</p>
+            <span class="edu-grade"
+              >Cum Laude · CGPA 3.86/4 · All Nepal Rank 2nd 🏆</span
+            >
+          </div>
+        </div>
+        <div class="edu-item reveal">
+          <div class="edu-dot"><i class="fas fa-school"></i></div>
+          <div class="edu-card">
+            <p class="edu-year">2003-2017</p>
+            <h4 class="edu-degree">Primary & Lower Secondary School</h4>
+            <p class="edu-school">Tilottama Secondary School</p>
+            <span class="edu-grade">CGPA: 3.8 · REPSA Topper Female 🌟</span>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <section
-    id="education"
-    class="education container-fluid align-items-center"
-  >
-    <div class="align-items-center section-heading text-center">
-      <h2>Education</h2>
-    </div>
-    <div class="container align-items-center">
-      <div class="education-horizontal-timeline">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-sm-4">
-            <div class="single-horizontal-timeline">
-              <div class="experience-time">
-                <h3>2019 - 2024</h3>
-                <h4><b>Bachelors in Computer Engineering </b></h4>
-              </div>
-              <div class="timeline-horizontal-border">
-                <i class="fa fa-circle" aria-hidden="true"></i>
-                <span class="single-timeline-horizontal"></span>
-              </div>
-              <div class="timeline">
-                <div class="timeline-content">
-                  <h5 class="title">Pulchowk Campus</h5>
-                  <!-- <h6>Pulchowk Lalitpur</h6> -->
-                  <p class="description">Aggregate Percentage : 82.44%</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="single-horizontal-timeline">
-              <div class="experience-time">
-                <h3>2018 - 2019</h3>
-                <h4><b> Major in Physics and Mathematics</b></h4>
-              </div>
-              <div class="timeline-horizontal-border">
-                <i class="fa fa-circle" aria-hidden="true"></i>
-                <span class="single-timeline-horizontal"></span>
-              </div>
-              <div class="timeline">
-                <div class="timeline-content">
-                  <h5 class="title">Tilottama Campus</h5>
-                  <!-- <h6>Tilottama-2, Yogikuti Rupandehi Nepal</h6> -->
-                  <p class="description">CGPA: 3.86 , All Nepal Rank 2nd</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="single-horizontal-timeline">
-              <div class="experience-time">
-                <h3>2017</h3>
-                <h4><b> Primary  &  Lower Secondary School</b></h4>
-              </div>
-              <div class="timeline-horizontal-border">
-                <i class="fa fa-circle" aria-hidden="true"></i>
-                <span class="single-timeline-horizontal"></span>
-               
-              </div>
-              <div class="timeline">
-                <div class="timeline-content">
-                  <h5 class="title">Tilottama Secondary School</h5>
-                  <!-- <h6>Suddhodhan-4, Rupandehi</h6> -->
-                  <p class="description">CGPA: 3.8 , REPSA Topper Female</p>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section class="experience-section" id="experience">
+      <div class="section-header center reveal">
+        <p class="section-label">Work</p>
+        <h2 class="section-title">Professional Experience</h2>
+      </div>
+      <div class="exp-grid exp-grid-pro">
+        <div class="exp-card exp-card-featured reveal">
+          <div class="exp-badge">Current</div>
+          <h4 class="exp-role">Software Engineer</h4>
+          <p class="exp-company">Growthzilla Inc. — California, US (Remote)</p>
+          <p class="exp-year">Feb 2024 — Present</p>
+          <ul class="exp-desc">
+            <li>
+              Developing AI-powered assistants for automating dynamic query
+              handling and dashboard features for salon management software
+            </li>
+            <li>
+              Building robust synchronization pipelines and automation workflows
+              improving operational efficiency for enterprise-level software
+            </li>
+            <li>
+              Implemented real-time communication via web sockets and
+              message-passing protocols
+            </li>
+          </ul>
+        </div>
+        <div class="exp-card reveal">
+          <h4 class="exp-role">Backend Engineering Trainee</h4>
+          <p class="exp-company">UxCam Pvt. Ltd. — Kathmandu</p>
+          <p class="exp-year">May — Jul 2023</p>
+          <ul class="exp-desc">
+            <li>
+              Developed scalable RESTful APIs with efficient server-client
+              interactions in Python
+            </li>
+            <li>
+              Enhanced control over database operations and performance
+              optimization.
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-    <div class="container-fluid py-3 qualification" id="experience">
-      <div class="container">
-        <div
-          class="position-relative d-flex align-items-center justify-content-center"
-        >
-          <h2 style="color: #51087e">EXPERIENCE</h2>
-        </div>
-        <br />
-        <br />
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="border-left border-primary pt-2 pl-3 ml-2">
-              <div class="position-relative mb-4">
-                <i
-                  class="far fa-dot-circle text-primary position-absolute"
-                  style="top: 2px; left: -32px"
-                ></i>
-                <h5 class="font-weight-bold " style="color: #6c0ba9">
-                  Software Engineer
-                </h5>
-
-                <strong class="mb-1">Growthzilla</strong> | <small>2024</small>
-
-                <ul>
-                  <li>
-                    Integration of accounting software ensuring seamless
-                    synchronization of daily logs.
-                  </li>
-
-                  <li>
-                    Developed robust authentication pipelines, data syncing
-                    processes, and retry/error handling mechanisms to ensure
-                    data consistency and reliability.
-                  </li>
-
-                  <li>
-                    Automation workflows in the company’s dashboard, improving
-                    operational efficiency.
-                  </li>
-
-                  <li>
-                    Real-time communication features using web sockets and
-                    message-passing protocols, enhancing system interactivity
-                    and responsiveness.
-                  </li>
-                </ul>
-              </div>
-              <div class="position-relative mb-4">
-                <i
-                  class="far fa-dot-circle text-primary position-absolute"
-                  style="top: 2px; left: -32px"
-                ></i>
-                <h5 class="font-weight-bold mb-1" style="color: #6c0ba9">
-                  Backend Engineering Trainee
-                </h5>
-                <p class="mb-2"><strong>UXCAM</strong> | <small>2023</small></p>
-                <ul>
-                  <li>
-                    Developed and maintained RESTful APIs, gaining proficiency
-                    in creating efficient server-client interactions in Python.
-                  </li>
-                  <li>
-                    Designed and implemented systems using raw SQL queries,
-                    demonstrating the ability to work directly with databases
-                    without relying on Django ORM enhancing control over
-                    database operations and performance optimization.
-                  </li>
-                </ul>
-              </div>
-              <div class="position-relative mb-4">
-                <i
-                  class="far fa-dot-circle text-primary position-absolute"
-                  style="top: 2px; left: -32px"
-                ></i>
-                <h5 class="font-weight-bold mb-1" style="color: #6c0ba9">
-                  Samsung Innovation Campus Scholar
-                </h5>
-                <p class="mb-2">
-                  <strong>Samsung</strong> | <small>2023</small>
-                </p>
-
-                <ul>
-                  <li>
-                    Completed a comprehensive training program in cutting-edge
-                    technologies, including AI, Big Data, and Programming in
-                    Python.
-                  </li>
-                  <li>
-                    Participated in Hackathon and developed a Capstone Project
-                    focused on real-world applications, addressing social
-                    challenges through technology solutions.
-                    <a
-                      href="https://www.canva.com/design/DAFeICsfaM0/EFwI6M8zCl2S15Yn687llg/watch?utm_content=DAFeICsfaM0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7e19891023"
-                      ><i class="fas fa-eye"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="border-left border-primary pt-2 pl-4 ml-2">
-              <div class="position-relative mb-4">
-                <i
-                  class="far fa-dot-circle text-primary position-absolute"
-                  style="top: 2px; left: -32px"
-                ></i>
-                <h5 class="font-weight-bold mb-1" style="color: #6c0ba9">
-                  Creative Director
-                </h5>
-                <p class="mb-2">
-                  <strong>LOCUS 2024</strong> | <small>2023-2024</small>
-                </p>
-
-                <ul>
-                  <li>
-                    Organized 20th National Technological Festival - LOCUS 2024
-                    and pre events like Girls To Code, CodeCamp, Hack-A-Week,
-                    and Technergy.
-                  </li>
-                  <li>
-                    Lead the creative team for LOCUS 2024, driving innovative
-                    design solutions, photography, videography and content
-                    strategies.
-                  </li>
-                  <li>
-                    Organized children in technology (CIT) in collaboration with
-                    Worldlink in 7 provinces with 100 schools to promote digital
-                    literacy, internet safety and skills development.
-                  </li>
-                </ul>
-              </div>
-
-              <div class="position-relative mb-4">
-                <i
-                  class="far fa-dot-circle text-primary position-absolute"
-                  style="top: 2px; left: -32px"
-                ></i>
-                <h5 class="font-weight-bold mb-1" style="color: #6c0ba9">
-                  Scholar, NAAMII
-                </h5>
-                <p class="mb-2">
-                  <strong>National AI School</strong> | <small>2023</small>
-                </p>
-                <ul>
-                  <li>
-                    Selected for the prestigious Fourth National Annual School
-                    by NAAMII, engaging in a comprehensive 10-day AI program.
-                  </li>
-
-                  <li>
-                    Attended lectures, lab sessions, and workshops dedicated to
-                    project work and professional development.
-                  </li>
-                </ul>
-              </div>
-              <div class="position-relative mb-4">
-                <i
-                  class="far fa-dot-circle text-primary position-absolute"
-                  style="top: 2px; left: -32px"
-                ></i>
-                <h5 class="font-weight-bold mb-1" style="color: #6c0ba9">
-                  WLiT Fellow & Mentor
-                </h5>
-                <p class="mb-2">
-                  <strong>Women Leader in Technology</strong> |
-                  <small>2021 | 2025</small>
-                </p>
-                <ul>
-                  <li>
-                    Participated in a rigorous 9-month bootcamp focused on MERN,
-                    alongside workshops on goal setting and leadership along
-                    with group projects in 2021.
-                  </li>
-                  <li>
-                    Facilitated hour of code program for primary level students
-                    to familiarize them with Tech and Programming.
-                  </li>
-                  <li>
-                    Mentored junior fellows in the 2025 Pokhara cohort, and
-                    facilitated advanced Js, Node, Express sessions and
-                    organized hackathon.
-                    <!-- <a href="https://example.com"><i class="fas fa-external-link-alt"></i></a> -->
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="container-fluid py-5"
-      style="background-color: #51087e"
-      id="skill"
-    >
-      <div class="align-items-center section-heading text-center">
-        <h2 style="color: white">INTEREST AND SKILLS</h2>
-      </div>
-      <div class="flex flex-wrap skills-wrapper py-3">
-        <div class="p-2"><img class="skillsn" src="./img/nodejs.png" /></div>
-        <div class="p-2"><img class="skillsn" src="./img/js.png" /></div>
-        <div class="p-2"><img class="skillsn" src="./img/react.png" /></div>
-        <div class="p-2"><img class="skillsn" src="./img/c++.png" /></div>
-        <div class="p-2"><img class="skillsn" src="./img/django.png" /></div>
-        <div class="p-2"><img class="skillsn" src="./img/python.png" /></div>
-        <div class="p-2"><img class="skillsn" src="./img/sql.png" /></div>
-        <div class="p-2"><img class="skillsn" src="./img/mongo.png" /></div>
-        <div class="p-2"><img class="skillsn" src="./img/aws.png" /></div>
-        <div class="p-2"><img class="skillsn" src="./img/cisco.jpeg" /></div>
-        <div class="p-2"><img class="skillsn" src="./img/docker.png" /></div>
-        <div class="p-2"><img class="skillsn" src="./img/linux.png" /></div>
-      </div>
-    </div>
-
-    <div class="container-fluid py-5 projects" id="projects">
-      <div class="container align-items-center justify-content-center">
-        <div class="align-items-center section-heading text-center">
-          <h2 style="color: #51087e">PROJECTS</h2>
-        </div>
-
-        <div class="flex flex-wrap skills-wrapper">
-          <div class="p-cards">
-            <div class="card-body">
-              <h5>
-                Grievance Recognition
-                <a
-                  target="_blank"
-                  style="border-color: white"
-                  href="https://www.canva.com/design/DAGv8i5pEI8/6ekGDvjSkLsxLOa1InE0SQ/view?utm_content=DAGv8i5pEI8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h02823a990a"
-                  ><i class="fas fa-eye"></i>
-                </a>
-              </h5>
-              <p class="projectdesc">Major Project, BE</p>
-              <a
-                target="_blank"
-                href="https://github.com/dhakalmahima188/GrievanceRecognition"
-                class="btn btn-sm btn-outline-primary py-2"
-                style="border-color: white"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-          <div class="p-cards">
-            <div class="card-body">
-              <h5>
-                YOGGIS
-                <a
-                  target="_blank"
-                  style="border-color: white"
-                  href="https://www.canva.com/design/DAFeICsfaM0/EFwI6M8zCl2S15Yn687llg/watch?utm_content=DAFeICsfaM0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7e19891023"
-                  ><i class="fas fa-eye"></i>
-                </a>
-              </h5>
-              <p class="projectdesc">Minor Project, 2023</p>
-              <a
-                target="_blank"
-                href="https://github.com/dhakalmahima188/Yoggis"
-                class="btn btn-sm btn-outline-primary py-2"
-                style="border-color: white"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-          <div class="p-cards">
-            <div class="card-body">
-              <h5>
-                Net-Config
-                <a
-                  target="_blank"
-                  style="border-color: white"
-                  href="https://dhakalmahima188.github.io/Pulchowk-Campus-Network-Design/"
-                  ><i class="fas fa-eye"></i>
-                </a>
-              </h5>
-              <p class="projectdesc">Computer Networks</p>
-              <a
-                target="_blank"
-                href="https://github.com/dhakalmahima188/Pulchowk-Campus-Network-Design"
-                class="btn btn-sm btn-outline-primary py-2"
-                style="border-color: white"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-          <div class="p-cards">
-            <div class="card-body">
-              <h5>ASK-OUT</h5>
-              <p class="projectdesc">WLIT Project, 2021</p>
-              <a
-                target="_blank"
-                href="https://github.com/dhakalmahima188/Ask-Out"
-                class="btn btn-sm btn-outline-primary py-2"
-                style="border-color: white"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-          <div class="p-cards">
-            <div class="card-body">
-              <h5>AAWAJ</h5>
-              <p class="projectdesc">OOP Project , 2022</p>
-              <a
-                target="_blank"
-                href="https://github.com/dhakalmahima188/Aawaj"
-                class="btn btn-sm btn-outline-primary py-2"
-                style="border-color: white"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-          <div class="p-cards">
-            <div class="card-body">
-              <h5>23EA Messenger</h5>
-              <p class="projectdesc">Huffman Compression</p>
-              <a
-                target="_blank"
-                href="https://github.com/dhakalmahima188/23EA-Messenger"
-                class="btn btn-sm btn-outline-primary py-2"
-                style="border-color: white"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="container-fluid text-center border-primary"
-      style="background-color: #51087e; width: 100%"
-      id="blogs"
-    >
-      <div class="container">
-        <div
-          class="position-relative d-flex align-items-center justify-content-center"
-        >
-          <h2 class="mt-4" style="color: white">BLOGS</h2>
-        </div>
-        <div class="slider-container">
-          <div class="cards-wrapper">
-            <div class="card-grid-space">
-              <div class="num">01</div>
-              <a
-                target="_blank"
-                class="card"
-                href="https://www.canva.com/design/DAGlzQXY1wE/gTVbCBzOsUCtonSkwsO_RA/view?utm_content=DAGlzQXY1wE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0130edea61"
-                style="--bg-img: url(/img/async.png)"
-              >
-                <div>
-                  <div class="date">12 July 2025</div>
-                  <div class="tags">
-                    <div class="tag">Asyncronous Programming</div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="card-grid-space">
-              <div class="num">02</div>
-              <a
-                target="_blank"
-                class="card"
-                href="https://www.canva.com/design/DAGm1QAKAFM/jvVSnAbqGwh6U7jAe-Fh6w/view?utm_content=DAGm1QAKAFM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7f47186883"
-                style="--bg-img: url(/img/node.png)"
-              >
-                <div>
-                  <div class="date">12 July 2025</div>
-                  <div class="tags">
-                    <div class="tag">Javascript as backend</div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="card-grid-space">
-              <div class="num">03</div>
-              <a
-                target="_blank"
-                class="card"
-                href="https://dhakalmahima188.github.io/Pulchowk-Campus-Network-Design/"
-                style="--bg-img: url(/img/network.png)"
-              >
-                <div>
-                  <div class="date">30 Aug 2023</div>
-                  <div class="tags">
-                    <div class="tag">Network Design</div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="card-grid-space">
-              <div class="num">04</div>
-              <a
-                target="_blank"
-                class="card"
-                href="https://dhakalmahima188.github.io/Raw-Login-Api/"
-                style="--bg-img: url(/img/api.png)"
-              >
-                <div>
-                  <div class="date">19 Dec 2022</div>
-                  <div class="tags">
-                    <div class="tag">Login from scratch-NOOB</div>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="card-grid-space">
-              <div class="num">04</div>
-              <a
-                target="_blank"
-                class="card"
-                href="https://dhakalmahima188.github.io/MongoDB-Scripts/"
-                style="
-                  --bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg);
-                "
-              >
-                <div>
-                  <div class="date">3 Nov 2022</div>
-                  <div class="tags">
-                    <div class="tag">MongoDB Scripts- NOOB</div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="container-fluid text-center py-5 px-sm-3 px-md-5 border"
-      id="portfolio"
-      style="background-color: white"
-    >
-      <div
-        class="container-fluid text-center py-5 px-sm-3 px-md-5"
-        id="portfolio"
-        style="background-color: white"
-      >
-        <div
-          class="position-relative d-flex align-items-center justify-content-center"
-        >
-          <h2 style="color: #51087e">MOMENTS</h2>
-        </div>
-        <div
-          id="carouselExampleIndicators"
-          class="carousel slide"
-          data-ride="carousel"
-          data-interval="1200"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="./img/new/wlit_pokhara.jpeg"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption">
-                <h5>Mentoring Wlit Cohort 2025 in Pokhara</h5>
-                <p>2024</p>
-              </div>
-            </div>
-
-            <div class="carousel-item">
-              <img
-                src="./img/new/hackaweek.jpeg"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption">
-                <h5>Hack a week, Winner</h5>
-                <p>Digital Health Category, 2023</p>
-              </div>
-            </div>
-
-            <div class="carousel-item">
-              <img
-                src="./img/new/girls_to_code.jpeg"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption">
-                <h5>Organizing Girls to Code</h5>
-                <p>LOCUS 2023</p>
-              </div>
-            </div>
-
-            <div class="carousel-item">
-              <img
-                src="./img/new/locus_Sf.jpeg"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption">
-                <h5>Mentoring in Software Fellowship</h5>
-                <p>LOCUS 2024</p>
-              </div>
-            </div>
-
-            <div class="carousel-item">
-              <img
-                src="./img/new/codecamp.jpeg"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption">
-                <h5>UXCAM Codecamp Winning Moment</h5>
-                <p>LOCUS 2023</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./img/new/firsthackathon.jpg"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption">
-                <h5>First Participation in Hackathon</h5>
-                <p>Special Moment, Team Trinamic Trio</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./img/new/locus2024.jpg"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption">
-                <h5>Ms. Creative Director @ LOCUS 2025</h5>
-                <p>National Technological Festival</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./img/new/promalaunch.jpg"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption">
-                <h5>Proma Launch</h5>
-                <p>Growthzilla</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./img/new/cit_janakpur.jpg"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption">
-                <h5>Children in Technology</h5>
-                <p>Janakpur</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="./img/new/naami.jpeg" class="d-block w-100" alt="..." />
-              <div class="carousel-caption">
-                <h5>4th Annual AI School,NAAMi</h5>
-                <p>ANAIS</p>
-              </div>
-            </div>
-          </div>
-
-          <a
-            class="carousel-control-prev"
-            href="#carouselExampleIndicators"
-            role="button"
-            data-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a
-            class="carousel-control-next"
-            href="#carouselExampleIndicators"
-            role="button"
-            data-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="container-fluid bg-primary text-white py-5 px-sm-3 px-md-5"
-      id="contact"
-    >
-      <div class="container text-center py-5">
-        <div class="d-flex justify-content-center mb-4">
-          <a
-            target="_blank"
-            class="btn btn-light btn-social mr-2"
-            href="https://github.com/dhakalmahima188"
-            ><i class="fab fa-github"></i
-          ></a>
-
-          <a
-            target="_blank"
-            class="btn btn-light btn-social mr-2"
-            href="https://twitter.com/mahiiii188"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <a
-            target="_blank"
-            class="btn btn-light btn-social mr-2"
-            href="https://www.facebook.com/mahima.dhakal.18"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a
-            target="_blank"
-            class="btn btn-light btn-social mr-2"
-            href="https://www.linkedin.com/in/mahima-dhakal-9227781b4/"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-          <a
-            target="_blank"
-            class="btn btn-light btn-social"
-            href="https://www.instagram.com/mahi.ve.1/"
-            ><i class="fab fa-instagram"></i
-          ></a>
-        </div>
-
-        <p class="m-0">
-          &copy;
-          <a class="text-white font-weight-bold" href="#"> Mahima Dhakal 2025</a
-          >. All Rights Reserved.
+    <section class="community-section" id="community">
+      <div class="section-header center reveal">
+        <p class="section-label">Fellowships & Community</p>
+        <h2 class="section-title">Beyond the Desk</h2>
+        <p class="section-desc">
+          Scholarships, fellowships, volunteering & the communities that shaped
+          me
         </p>
       </div>
+      <div class="exp-grid">
+        <div class="exp-card reveal">
+          <h4 class="exp-role">Scholar, Samsung Innovation Campus</h4>
+          <p class="exp-company">Samsung Electronics</p>
+          <p class="exp-year">Dec 2022 — Mar 2023</p>
+          <ul class="exp-desc">
+            <li>
+              Completed a comprehensive program in cutting-edge technologies:
+              AI, Big Data, with hands-on Python programming
+            </li>
+            <li>
+              Built a capstone project addressing social challenges through
+              technology
+            </li>
+          </ul>
+        </div>
+        <div class="exp-card reveal">
+          <h4 class="exp-role">Scholar, 4th National AI School</h4>
+          <p class="exp-company">
+            NAAMII — Nepal Applied Mathematics & Informatics Institute
+          </p>
+          <p class="exp-year">May — Jun 2023</p>
+          <ul class="exp-desc">
+            <li>
+              Selected for an intensive AI/ML program, 55 hours of lectures, 18
+              hours of lab sessions & 14 hours of project work under global AI
+              experts
+            </li>
+            <li>
+              Hands-on experience in deep learning, neural networks,
+              transformers, computer vision, NLP & graph neural networks
+            </li>
+          </ul>
+        </div>
+        <div class="exp-card reveal">
+          <h4 class="exp-role">Creative Director</h4>
+          <p class="exp-company">
+            LOCUS 2024 — National Technological Festival
+          </p>
+          <p class="exp-year">2023 — 2024</p>
+          <ul class="exp-desc">
+            <li>
+              Organized the 20th edition of Nepal's largest tech fest,
+              facilitating student-led innovations across the country, with
+              pre-events like Girls To Code, CodeCamp & Hack-A-Week
+            </li>
+            <li>
+              Led creative team driving innovative design, photography,
+              videography & content strategies
+            </li>
+            <li>
+              Coordinated Children in Technology program across all 7 provinces
+              with 100+ schools promoting digital literacy and internet safety
+            </li>
+          </ul>
+        </div>
+        <div class="exp-card reveal">
+          <h4 class="exp-role">Fellow & Mentor</h4>
+          <p class="exp-company">Women Leaders in Technology (WLiT)</p>
+          <p class="exp-year">2021 · 2025</p>
+          <ul class="exp-desc">
+            <li>
+              Completed a rigorous 9-month MERN bootcamp with leadership
+              workshops & group projects
+            </li>
+            <li>
+              Facilitated Hour of Code for primary-level students to introduce
+              them to tech
+            </li>
+            <li>
+              Mentored the 2025 Pokhara cohort and facilitated hands-on JS, Node
+              & Express workshops and organized hackathon.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="awards-section" id="awards">
+      <div class="section-header center reveal">
+        <p class="section-label">Recognition</p>
+        <h2 class="section-title">Honours & Awards</h2>
+      </div>
+      <div class="awards-grid">
+        <div class="award-card reveal">
+          <div class="award-icon"><i class="fas fa-trophy"></i></div>
+          <p class="award-year">2023</p>
+          <h4 class="award-title">Winner — Hack A Week</h4>
+          <p class="award-org">LOCUS 2023, Naamche</p>
+          <p class="award-desc">
+            Won a week-long national-level hackathon under the digital health
+            category — one of several national-level hackathon and code camp
+            victories.
+          </p>
+        </div>
+        <div class="award-card reveal">
+          <div class="award-icon"><i class="fas fa-award"></i></div>
+          <p class="award-year">2020 — 2024</p>
+          <h4 class="award-title">Golden Jubilee Scholarship</h4>
+          <p class="award-org">Embassy of India</p>
+          <p class="award-desc">
+            Honored for exceptional academic achievements under the India-Nepal
+            diplomatic scholarship program , annual grant throughout four years
+            of undergraduate study.
+          </p>
+        </div>
+        <div class="award-card reveal">
+          <div class="award-icon"><i class="fas fa-graduation-cap"></i></div>
+          <p class="award-year">2019</p>
+          <h4 class="award-title">Full Scholarship Recipient</h4>
+          <p class="award-org">IOE, Pulchowk Campus</p>
+          <p class="award-desc">
+            Merit scholarship for securing 128th rank among 15,000 candidates in
+            the entrance examination.
+          </p>
+        </div>
+        <div class="award-card reveal">
+          <div class="award-icon"><i class="fas fa-star"></i></div>
+          <p class="award-year">2019</p>
+          <h4 class="award-title">National Science Day Award</h4>
+          <p class="award-org">Ministry of National Science & Technology</p>
+          <p class="award-desc">
+            Provincial Topper, Lumbini Province in +2 Science (CGPA 3.86).
+            Awarded on the 7th National Science Day for academic excellence.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills-section" id="skills">
+      <div class="section-header center reveal">
+        <p class="section-label">Tech Stack</p>
+        <h2 class="section-title">Skills & Interests</h2>
+        <p class="section-desc">
+          Technologies I love working with and keep exploring
+        </p>
+      </div>
+      <div class="skills-cloud reveal">
+        <div class="skill-pill"><i class="fab fa-node-js"></i> Node.js</div>
+        <div class="skill-pill">
+          <i class="fab fa-js-square"></i> JavaScript
+        </div>
+        <div class="skill-pill"><i class="fab fa-react"></i> React</div>
+        <div class="skill-pill"><i class="fas fa-code"></i> C / C++</div>
+        <div class="skill-pill"><i class="fab fa-python"></i> Python</div>
+        <div class="skill-pill"><i class="fas fa-fire"></i> Django</div>
+        <div class="skill-pill"><i class="fas fa-server"></i> Express</div>
+        <div class="skill-pill"><i class="fas fa-database"></i> MySQL</div>
+        <div class="skill-pill"><i class="fas fa-leaf"></i> MongoDB</div>
+        <div class="skill-pill"><i class="fab fa-aws"></i> AWS</div>
+        <div class="skill-pill"><i class="fab fa-git-alt"></i> Git</div>
+        <div class="skill-pill"><i class="fab fa-docker"></i> Docker</div>
+        <div class="skill-pill"><i class="fab fa-linux"></i> Linux</div>
+        <div class="skill-pill"><i class="fas fa-robot"></i> NLP</div>
+        <div class="skill-pill"><i class="fas fa-brain"></i> Deep Learning</div>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projects">
+      <div class="section-header center reveal">
+        <p class="section-label">Portfolio</p>
+        <h2 class="section-title">Things I've Built</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <span class="project-number">01</span>
+          <h4 class="project-name">Grievance Recognition</h4>
+          <p class="project-type">Undergraduate Research Thesis · 2023–2024</p>
+          <p class="project-desc-text">
+            Intelligent classification system for the Nepal government to
+            streamline complaint handling using Nepali text & speech.
+          </p>
+          <div class="project-links">
+            <a
+              href="https://github.com/dhakalmahima188/GrievanceRecognition"
+              target="_blank"
+              title="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.canva.com/design/DAGv8i5pEI8/6ekGDvjSkLsxLOa1InE0SQ/view"
+              target="_blank"
+              title="View"
+              ><i class="fas fa-eye"></i
+            ></a>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <span class="project-number">02</span>
+          <h4 class="project-name">YOGGIS</h4>
+          <p class="project-type">Academic Minor Project · 2022–2023</p>
+          <p class="project-desc-text">
+            Web-based AI yoga trainer that provides real-time feedback on yoga
+            poses performed by the user, with posture correction recommendations
+            using computer vision.
+          </p>
+          <div class="project-links">
+            <a
+              href="https://github.com/dhakalmahima188/Yoggis"
+              target="_blank"
+              title="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.canva.com/design/DAFeICsfaM0/EFwI6M8zCl2S15Yn687llg/watch"
+              target="_blank"
+              title="View"
+              ><i class="fas fa-eye"></i
+            ></a>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <span class="project-number">03</span>
+          <h4 class="project-name">Pulchowk Campus Network</h4>
+          <p class="project-type">Network Architecture · 2023</p>
+          <p class="project-desc-text">
+            Scalable campus network simulation with dynamic routing, VLAN-based
+            traffic isolation, DNS & structured subnetting in Cisco Packet
+            Tracer.
+          </p>
+          <div class="project-links">
+            <a
+              href="https://github.com/dhakalmahima188/Pulchowk-Campus-Network-Design"
+              target="_blank"
+              title="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://dhakalmahima188.github.io/Pulchowk-Campus-Network-Design/"
+              target="_blank"
+              title="Live"
+              ><i class="fas fa-eye"></i
+            ></a>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <span class="project-number">04</span>
+          <h4 class="project-name">ASK-OUT</h4>
+          <p class="project-type">WLiT Project · 2021</p>
+          <p class="project-desc-text">
+            A web-based application that provides a question-and-answer platform
+            to the group of people working together in a workplace anonymously.
+          </p>
+          <div class="project-links">
+            <a
+              href="https://github.com/dhakalmahima188/Ask-Out"
+              target="_blank"
+              title="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <span class="project-number">05</span>
+          <h4 class="project-name">AAWAJ</h4>
+          <p class="project-type">OOP Project · 2022</p>
+          <p class="project-desc-text">
+            A console-based social media application with features for
+            communication and networking.
+          </p>
+          <div class="project-links">
+            <a
+              href="https://github.com/dhakalmahima188/Aawaj"
+              target="_blank"
+              title="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <span class="project-number">06</span>
+          <h4 class="project-name">23EA Messenger</h4>
+          <p class="project-type">Huffman Compression</p>
+          <p class="project-desc-text">
+            Message compression using Huffman Encoding in C++.
+          </p>
+          <div class="project-links">
+            <a
+              href="https://github.com/dhakalmahima188/23EA-Messenger"
+              target="_blank"
+              title="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blogs-section" id="blogs">
+      <div class="section-header center reveal">
+        <p class="section-label">Writing</p>
+        <h2 class="section-title">Blog & Notes</h2>
+      </div>
+      <div class="blogs-grid">
+        <a
+          class="blog-card reveal"
+          href="https://www.canva.com/design/DAGlzQXY1wE/gTVbCBzOsUCtonSkwsO_RA/view"
+          target="_blank"
+        >
+          <div class="blog-card-gradient">
+            <span class="blog-number">01</span>
+          </div>
+          <div class="blog-card-body">
+            <p class="blog-tag">Deep Dive</p>
+            <h4 class="blog-title">Asynchronous Programming</h4>
+            <p class="blog-date">12 July 2025</p>
+          </div>
+        </a>
+        <a
+          class="blog-card reveal"
+          href="https://www.canva.com/design/DAGm1QAKAFM/jvVSnAbqGwh6U7jAe-Fh6w/view"
+          target="_blank"
+        >
+          <div class="blog-card-gradient">
+            <span class="blog-number">02</span>
+          </div>
+          <div class="blog-card-body">
+            <p class="blog-tag">Backend</p>
+            <h4 class="blog-title">JavaScript as Backend</h4>
+            <p class="blog-date">12 July 2025</p>
+          </div>
+        </a>
+        <a
+          class="blog-card reveal"
+          href="https://dhakalmahima188.github.io/Pulchowk-Campus-Network-Design/"
+          target="_blank"
+        >
+          <div class="blog-card-gradient">
+            <span class="blog-number">03</span>
+          </div>
+          <div class="blog-card-body">
+            <p class="blog-tag">Networks</p>
+            <h4 class="blog-title">Network Design</h4>
+            <p class="blog-date">30 Aug 2023</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="hobbies-section" id="hobbies">
+      <div class="section-header center reveal">
+        <p class="section-label">Beyond Code</p>
+        <h2 class="section-title">Things I Love</h2>
+      </div>
+
+      <div class="hobbies-grid">
+        <div class="poetry-card reveal">
+          <div class="poetry-visual">
+            <img src="./v2/img/hobbies/poetry.jpg" alt="Poetry" />
+            <div class="poetry-visual-overlay">
+              <h4>Writing Poetry</h4>
+              <p>शब्दहरूमा बुनिएका भावनाहरू</p>
+            </div>
+          </div>
+          <div class="poetry-reader">
+            <p class="poetry-reader-label">Written with love <3</p>
+            <div class="poem-carousel">
+              <div class="poem-track" id="poemTrack">
+                <div class="poem-slide">
+                  <h5 class="poem-title">"कुरुछेत्र"</h5>
+                  <div class="poem-text">
+                    कता-कता मन बहकिए जस्तो लाग्छ,<br />
+                    पिंजडामै रामाउदा, आकाश बिर्सेको जस्तो लाग्छ,<br />
+                    हृदय बाधेको तिमीलाई, फुकाउन मन डराएपनि<br />
+                    मायाजाल बुझ्न, आफैले नचाहेझैँ लाग्छ<br />
+                    <br />
+                    आजसम्म आफ्नो बाटो एक्लै बनाएकी म,<br />
+                    रङ्गमञ्चमा उठ्छन् प्रश्नहरू सबै,<br />
+                    उत्तर भेटिन्छ तर अर्थ हराए जस्तो लाग्छ, <br />
+                    हामी र हाम्रो सोच्दा "मेरो" अस्तित्वो हराएझै,<br />
+                    तिमीमा हराउन खोज्दा, आफूनै हराउछु कि जस्तो लाग्छ!<br />
+                    <br />
+
+                    प्रेमिका मात्र बन्नु त छैन<br />
+                    तर शास्त्रमा लेखेको प्रेम येही हो जस्तो लाग्छ,<br />
+                    सायद षड्यन्त्र म आफै बुन्दै छु,<br />
+                    जब मेरो प्रेमको कुरुछेत्र बन्छ,<br />
+                    सकुनी नि मै, कृष्ण नि मै जस्तो लाग्छ!
+                  </div>
+                </div>
+
+                <div class="poem-slide">
+                  <h5 class="poem-title">"कठै बुडि औलो"</h5>
+                  <div class="poem-text">
+                    जसरी मौन छन आज, निलो किताबका ती चिल्ला पान्नाहरु,<br />
+                    विवश रहयो त्यो बुडि औलो!<br />
+                    निलो मसिमा लत्पताएर कठै, कत्ती लोभिला आँखा सङै थिचिक्क
+                    थिचेको हो<br />
+                    फेस्बुकका पृष्ठहरुमा, क्रोधको बलले थिच्दै होला किबोर्ड
+                    अहिले<br />
+                    "ए सरकार: किन चुप छौ: किन भ्रष्टाचार?"<br />
+                    प्रत्यक पटक खबर आउदा, पल्टाइ पल्टाइ हेर्ने गर्नु बुडि
+                    औलो!!<br />
+                    हैन हैन:<br />
+                    कतै होला पनि त्यहि बुडि औलो, खट्खटि चौध खरब नोट गन्दै<br />
+                    कतै आज हो कि भोलि? भन्दै।<br /><br />
+                    किन अब गुरु द्रोण नै चाहिएको हो कि?<br />
+                    काटीदिन त्यो बुडि औलो<br />
+                    अनि कलियुगका एक्लब्ब्यहरु पनि चुप लागेर हेर्छन<br />
+                    महारमिता!!!!<br />
+                    येहिबिच कतै बिध्रोह को कलम समात्दै<br />
+                    तपाइको बुडि औलाको एक थम्ब्स अप<br />
+                    फेरि मतपत्रमा होइन,<br />
+                    यो कबितालाइ!!
+                  </div>
+                </div>
+                <div class="poem-slide">
+                  <h5 class="poem-title">"चिया"</h5>
+                  <div class="poem-text">
+                    एक कप<br />
+                    मायाको चिया भित्र<br />
+                    हलिदेउ न थोरै मिठास तिम्रो गुलियो प्रेमको!<br />
+                    आनि गाढा चियापत्ती जस्तो रङ्ग<br />
+                    चढ्ला कि कतै।।<br /><br />
+                    छुट्टाउने छु म<br />
+                    प्रत्येक बधा,<br />
+                    प्रत्येक पिडा,<br />
+                    त्यो चियाछान्ने बनेर,<br />
+                    खुसियाली मात्र झर्नेछ कपमा!!<br /><br />
+                    सुरुप्प पारेर मन्दमुस्कानले,<br />
+                    त्यो एक सुर्की प्रेमको<br />
+                    सङै लगाउला नि हुन्न?
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="poem-nav">
+              <button class="poem-nav-btn" onclick="prevPoem()">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <span class="poem-counter" id="poemCounter">1 / 3</span>
+              <button class="poem-nav-btn" onclick="nextPoem()">
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trek-card reveal" style="margin-top: 2rem">
+        <div class="trek-hero">
+          <img
+            src="./v2/img/treks/langtang/langtang-0.jpg"
+            alt="Langtang Valley Trek"
+          />
+          <div class="trek-hero-overlay">
+            <div class="trek-badge">
+              <i class="fas fa-mountain"></i> Jan 2026
+            </div>
+            <h2 class="trek-hero-title">Langtang Valley Trek</h2>
+            <p class="trek-hero-subtitle">Langtang Region, Nepal</p>
+          </div>
+        </div>
+        <div class="trek-body">
+          <div class="trek-stats">
+            <div class="trek-stat">
+              <i class="fas fa-mountain"></i><span>4,400m · Kyanjin Ri</span>
+            </div>
+            <div class="trek-stat">
+              <i class="fas fa-route"></i><span>~65 km Trail</span>
+            </div>
+            <div class="trek-stat">
+              <i class="fas fa-calendar-alt"></i><span>22–25 Jan 2026</span>
+            </div>
+            <div class="trek-stat">
+              <i class="fas fa-map-marker-alt"></i><span>Langtang, Nepal</span>
+            </div>
+          </div>
+          <p
+            style="
+              font-size: 0.78rem;
+              color: var(--rose-gold);
+              font-weight: 500;
+              letter-spacing: 0.04em;
+              margin-bottom: 1rem;
+            "
+          >
+            Kathmandu → Syafru → Bamboo → Langtang Valley → Gompa → Kyanjin Ri
+          </p>
+          <p class="trek-experience">
+            Risky roads, yet each step carrying a different kind of beauty.
+            Crossing the Jhalunge suspension bridges over Langtang Khola with
+            the best crew, watching Lirung peak get closer with a different kind
+            of magic in every timelapse. Walking through Old Langtang Valley —
+            the whole settlement destroyed by the massive rock-ice avalanche
+            during the 2015 earthquake — and seeing it today, fully transitioned
+            from "recovery mode," back, beautiful, and better than ever.
+            Langtang, you're worth the struggle.
+          </p>
+          <p class="trek-gallery-label">Gallery — Langtang Diaries</p>
+          <div class="trek-gallery">
+            <div class="trek-gallery-item featured" onclick="openLightbox(0)">
+              <img
+                src="./v2/img/treks/langtang/langtang-11.png"
+                alt="Langtang Trek"
+              />
+            </div>
+            <div class="trek-gallery-item" onclick="openLightbox(1)">
+              <img
+                src="./v2/img/treks/langtang/langtang-2.png"
+                alt="Langtang Trek"
+              />
+            </div>
+            <div class="trek-gallery-item" onclick="openLightbox(2)">
+              <img
+                src="./v2/img/treks/langtang/langtang-3.png"
+                alt="Langtang Trek"
+              />
+            </div>
+            <div class="trek-gallery-item" onclick="openLightbox(3)">
+              <img
+                src="./v2/img/treks/langtang/langtang-4.png"
+                alt="Langtang Trek"
+              />
+            </div>
+            <div class="trek-gallery-item" onclick="openLightbox(4)">
+              <img
+                src="./v2/img/treks/langtang/langtang-10.png"
+                alt="Langtang Trek"
+              />
+            </div>
+            <div class="trek-gallery-item" onclick="openLightbox(5)">
+              <img
+                src="./v2/img/treks/langtang/langtang-6.png"
+                alt="Langtang Trek"
+              />
+            </div>
+            <div class="trek-gallery-item" onclick="openLightbox(6)">
+              <img
+                src="./v2/img/treks/langtang/langtang-7.png"
+                alt="Langtang Trek"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="lightbox-overlay" id="lightbox">
+      <button class="lightbox-close" onclick="closeLightbox()">
+        <i class="fas fa-times"></i>
+      </button>
+      <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1)">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1)">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+      <span class="lightbox-caption" id="lightboxCaption"></span>
     </div>
 
-    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
-    <a href="#home" class="btn btn-outline-dark px-0 back-to-top"
-      ><i class="fa fa-angle-double-up"></i
-    ></a>
+    <section class="moments-section" id="moments">
+      <div class="section-header center reveal">
+        <p class="section-label">Gallery</p>
+        <h2 class="section-title">Captured Moments</h2>
+      </div>
+      <div class="moments-carousel reveal">
+        <div class="moments-track" id="momentsTrack">
+          <div class="moment-slide">
+            <img src="./v2/img/moments/wlit_pokhara.jpeg" alt="" class="moment-img" />
+            <div class="moment-overlay">
+              <h4>Mentoring WLiT Cohort 2025</h4>
+              <p>Pokhara</p>
+            </div>
+          </div>
+          <div class="moment-slide">
+            <img src="./v2/img/moments/hackaweek.jpeg" alt="" class="moment-img" />
+            <div class="moment-overlay">
+              <h4>Hack a Week — Winner 🏆</h4>
+              <p>Digital Health Category, 2023</p>
+            </div>
+          </div>
+          <div class="moment-slide">
+            <img src="./v2/img/moments/girls_to_code.jpeg" alt="" class="moment-img" />
+            <div class="moment-overlay">
+              <h4>Organizing Girls to Code</h4>
+              <p>LOCUS 2023</p>
+            </div>
+          </div>
+          <div class="moment-slide">
+            <img src="./v2/img/moments/locus_Sf.jpeg" alt="" class="moment-img" />
+            <div class="moment-overlay">
+              <h4>Mentoring Software Fellowship</h4>
+              <p>LOCUS 2024</p>
+            </div>
+          </div>
+          <div class="moment-slide">
+            <img src="./v2/img/moments/codecamp.jpeg" alt="" class="moment-img" />
+            <div class="moment-overlay">
+              <h4>UXCAM CodeCamp — Winner</h4>
+              <p>LOCUS 2023</p>
+            </div>
+          </div>
+          <div class="moment-slide">
+            <img src="./v2/img/moments/firsthackathon.jpg" alt="" class="moment-img" />
+            <div class="moment-overlay">
+              <h4>First Hackathon ✨</h4>
+              <p>Team Trinamic Trio</p>
+            </div>
+          </div>
+          <div class="moment-slide">
+            <img src="./v2/img/moments/locus2024.jpg" alt="" class="moment-img" />
+            <div class="moment-overlay">
+              <h4>Creative Director @ LOCUS 2025</h4>
+              <p>National Technological Festival</p>
+            </div>
+          </div>
+          <div class="moment-slide">
+            <img src="./v2/img/moments/promalaunch.jpg" alt="" class="moment-img" />
+            <div class="moment-overlay">
+              <h4>Proma Launch</h4>
+              <p>Growthzilla</p>
+            </div>
+          </div>
+          <div class="moment-slide">
+            <img src="./v2/img/moments/cit_janakpur.jpg" alt="" class="moment-img" />
+            <div class="moment-overlay">
+              <h4>Children in Technology</h4>
+              <p>Janakpur</p>
+            </div>
+          </div>
+          <div class="moment-slide">
+            <img src="./v2/img/moments/naami.jpeg" alt="" class="moment-img" />
+            <div class="moment-overlay">
+              <h4>4th Annual AI School</h4>
+              <p>NAAMII · ANAIS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-btn" onclick="prevSlide()">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <div class="carousel-dots" id="carouselDots"></div>
+        <button class="carousel-btn" onclick="nextSlide()">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-    <script src="js/main.js"></script>
+    <section class="contact-section" id="contact">
+      <h2 class="contact-title">Let's Connect</h2>
+      <p class="contact-subtitle">
+        Building my piece of the tech revolution from Nepal.<br />
+        Whether it's a help call, idea or just a hello, my inbox is always open.
+      </p>
+      <a
+        href="mailto:dhakalmahima18@gmail.com"
+        class="btn-ghost"
+        style="
+          color: white;
+          border-color: rgba(255, 255, 255, 0.3);
+          margin-bottom: 2rem;
+          display: inline-flex;
+        "
+      >
+        <i class="fas fa-envelope"></i> dhakalmahima18@gmail.com
+      </a>
+      <div class="social-links">
+        <a href="https://github.com/dhakalmahima188" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://twitter.com/mahiiii188" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://www.facebook.com/mahima.dhakal.18" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/mahima-dhakal18/" target="_blank"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a href="https://www.mahimadhakal18.com.np/" target="_blank"
+          ><i class="fas fa-globe"></i
+        ></a>
+        <a href="https://www.instagram.com/__mahima.exe/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+      <div class="flower-divider" style="color: rgba(255, 255, 255, 0.2)">
+        ✦
+      </div>
+      <p class="footer-text">© 2026 Mahima Dhakal.</p>
+    </section>
+
+    <button
+      class="back-to-top"
+      id="backToTop"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="v2/js/index.js"></script>
   </body>
 </html>
