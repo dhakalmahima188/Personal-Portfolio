@@ -33,13 +33,11 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-// ═══ CAROUSEL ═══
 let currentSlide = 0;
 const track = document.getElementById("momentsTrack");
 const totalSlides = track.children.length;
 const dotsContainer = document.getElementById("carouselDots");
 
-// Create dots
 for (let i = 0; i < totalSlides; i++) {
   const dot = document.createElement("button");
   dot.className = "carousel-dot" + (i === 0 ? " active" : "");
