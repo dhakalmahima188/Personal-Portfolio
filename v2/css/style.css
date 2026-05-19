@@ -292,6 +292,34 @@ nav.scrolled {
   letter-spacing: 0.02em;
 }
 
+.hero-status {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: -1.5rem auto 2rem;
+  opacity: 0;
+  animation: rise-in 1s ease 0.75s forwards;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  display: inline-block;
+  box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6);
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6); }
+  70% { box-shadow: 0 0 0 7px rgba(74, 222, 128, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+}
+
 .hero-cta {
   display: flex;
   gap: 1rem;
@@ -695,7 +723,7 @@ section {
 }
 
 .exp-grid {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -703,7 +731,8 @@ section {
 }
 
 .exp-grid-pro {
-  max-width: 900px;
+  max-width: 1100px;
+  grid-template-columns: 2fr 1fr;
 }
 
 .exp-card {
@@ -738,6 +767,7 @@ section {
   border: 1.5px solid var(--lavender-deep);
   background: linear-gradient(135deg, white 0%, var(--blush-light) 100%);
   position: relative;
+  padding: 2.2rem 2.4rem;
 }
 
 .exp-badge {
