@@ -315,9 +315,15 @@ nav.scrolled {
 }
 
 @keyframes pulse-dot {
-  0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6); }
-  70% { box-shadow: 0 0 0 7px rgba(74, 222, 128, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(74, 222, 128, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+  }
 }
 
 .hero-cta {
@@ -625,6 +631,12 @@ section {
     var(--warm-white) 100%
   );
 }
+.edu-item:nth-child(odd) .edu-card {
+  background: linear-gradient(160deg, var(--blush-light) 0%, white 100%);
+}
+.edu-item:nth-child(even) .edu-card {
+  background: linear-gradient(160deg, rgba(242, 209, 217, 0.35) 0%, white 100%);
+}
 
 .edu-timeline {
   max-width: 800px;
@@ -866,8 +878,13 @@ section {
   padding: 2rem 0;
   border-bottom: 1px solid rgba(232, 213, 245, 0.5);
 }
-.exp-row:first-child { padding-top: 0; }
-.exp-row:last-child { border-bottom: none; padding-bottom: 0; }
+.exp-row:first-child {
+  padding-top: 0;
+}
+.exp-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
 .exp-row.current {
   background: linear-gradient(90deg, var(--blush-light), transparent 70%);
   border-radius: 12px;
@@ -881,12 +898,22 @@ section {
   letter-spacing: 0.04em;
   padding-top: 0.3rem;
 }
-.exp-row.current .exp-row-year { color: var(--rose); font-weight: 500; }
-.exp-row .exp-company { margin-top: -0.1rem; }
+.exp-row.current .exp-row-year {
+  color: var(--rose);
+  font-weight: 500;
+}
+.exp-row .exp-company {
+  margin-top: -0.1rem;
+}
 
 @media (max-width: 700px) {
-  .exp-row { grid-template-columns: 1fr; gap: 0.4rem; }
-  .exp-row.current { margin: 0; }
+  .exp-row {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+  .exp-row.current {
+    margin: 0;
+  }
 }
 .community-strip {
   display: flex;
@@ -897,8 +924,13 @@ section {
   max-width: 1100px;
   margin: 0 auto;
 }
-.community-strip::-webkit-scrollbar { height: 5px; }
-.community-strip::-webkit-scrollbar-thumb { background: var(--lavender-deep); border-radius: 10px; }
+.community-strip::-webkit-scrollbar {
+  height: 5px;
+}
+.community-strip::-webkit-scrollbar-thumb {
+  background: var(--lavender-deep);
+  border-radius: 10px;
+}
 
 .community-chip {
   flex: none;
@@ -990,11 +1022,15 @@ section {
 }
 
 @media (max-width: 700px) {
-  .community-chip { width: 280px; }
+  .community-chip {
+    width: 280px;
+  }
 }
 
 @media (max-width: 700px) {
-  .community-chip { width: 240px; }
+  .community-chip {
+    width: 240px;
+  }
 }
 
 .community-grid {
@@ -1012,7 +1048,9 @@ section {
   box-shadow: 0 2px 16px rgba(122, 45, 107, 0.04);
   transition: all 0.3s ease;
 }
-.community-card::before { content: none; } /* remove the top-bar hover from .exp-card */
+.community-card::before {
+  content: none;
+} /* remove the top-bar hover from .exp-card */
 .community-card:hover {
   transform: translateX(3px);
   box-shadow: 0 8px 24px rgba(122, 45, 107, 0.08);
@@ -1020,7 +1058,9 @@ section {
 }
 
 @media (max-width: 700px) {
-  .community-grid { grid-template-columns: 1fr; }
+  .community-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .skills-section {
@@ -1186,8 +1226,12 @@ section {
   font-size: 1.3rem;
   margin-bottom: 1.2rem;
 }
-.award-hero .award-title { font-size: 1.35rem; }
-.award-hero .award-desc { margin-top: 0.4rem; }
+.award-hero .award-title {
+  font-size: 1.35rem;
+}
+.award-hero .award-desc {
+  margin-top: 0.4rem;
+}
 
 .award-list {
   display: flex;
@@ -1199,8 +1243,13 @@ section {
   padding: 1.3rem 0;
   border-bottom: 1px solid rgba(183, 110, 121, 0.2);
 }
-.award-row:last-child { border-bottom: none; padding-bottom: 0; }
-.award-row:first-child { padding-top: 0; }
+.award-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.award-row:first-child {
+  padding-top: 0;
+}
 
 .award-row-icon {
   width: 38px;
@@ -1241,7 +1290,9 @@ section {
 }
 
 @media (max-width: 800px) {
-  .awards-showcase { grid-template-columns: 1fr; }
+  .awards-showcase {
+    grid-template-columns: 1fr;
+  }
 }
 
 .awards-section {
