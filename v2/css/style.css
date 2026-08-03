@@ -949,7 +949,8 @@ section {
   line-height: 1.6;
 }
 .community-chip {
-  width: 320px;
+  width: 450px;
+  height: auto;
 }
 .chip-org {
   font-size: 0.8rem;
@@ -976,6 +977,16 @@ section {
   color: var(--lavender-deep);
   font-size: 0.6rem;
   top: 4px;
+}
+.chip-sub {
+  padding-top: 0.7rem;
+  margin-top: 0.7rem;
+  border-top: 1px dashed rgba(183, 110, 121, 0.25);
+}
+.chip-sub:first-of-type {
+  border-top: none;
+  margin-top: 0.3rem;
+  padding-top: 0;
 }
 
 @media (max-width: 700px) {
