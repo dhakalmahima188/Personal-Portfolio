@@ -726,19 +726,21 @@ section {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
 .exp-grid-pro {
   max-width: 1100px;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: start;
 }
 
 .exp-card {
   background: white;
   border-radius: 20px;
-  padding: 2rem;
+  padding: 1.5rem 1.6rem;
   border: 1px solid rgba(232, 213, 245, 0.4);
   transition: all 0.4s ease;
   position: relative;
@@ -767,7 +769,36 @@ section {
   border: 1.5px solid var(--lavender-deep);
   background: linear-gradient(135deg, white 0%, var(--blush-light) 100%);
   position: relative;
-  padding: 2.2rem 2.4rem;
+  padding: 1.6rem 1.8rem;
+  box-shadow: 0 10px 28px rgba(122, 45, 107, 0.08);
+  transform: translateY(-2px);
+}
+
+.exp-card-featured::before {
+  opacity: 1;
+  height: 4px;
+}
+
+.exp-card-featured .exp-role {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.exp-card-featured .exp-company {
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.exp-card-featured .exp-year {
+  margin-bottom: 0.7rem;
+}
+
+.exp-card-featured .exp-desc {
+  margin-top: 0.2rem;
+}
+
+.exp-card-featured .exp-desc li {
+  margin-bottom: 0.3rem;
 }
 
 .exp-badge {
