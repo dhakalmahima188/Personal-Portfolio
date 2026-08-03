@@ -854,6 +854,67 @@ section {
   font-size: 0.6rem;
   top: 4px;
 }
+/* ── Experience: ledger, not cards ── */
+.exp-ledger {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.exp-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+ border-bottom: 1px solid rgba(183, 110, 121, 0.35);
+}
+.exp-row:first-child { padding-top: 0; }
+.exp-row:last-child { border-bottom: none; padding-bottom: 0; }
+.exp-row.current {
+  background: linear-gradient(90deg, var(--blush-light), transparent 70%);
+  border-radius: 12px;
+  margin: 0 -1.5rem;
+  padding: 1.8rem 1.5rem;
+  border-bottom: none;
+}
+.exp-row-year {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  padding-top: 0.3rem;
+}
+.exp-row.current .exp-row-year { color: var(--rose); font-weight: 500; }
+.exp-row .exp-company { margin-top: -0.1rem; }
+
+@media (max-width: 700px) {
+  .exp-row { grid-template-columns: 1fr; gap: 0.4rem; }
+  .exp-row.current { margin: 0; }
+}
+
+/* ── Community: compact 2-col grid with accent edge, not full cards ── */
+.community-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.3rem;
+}
+.community-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.4rem 1.6rem;
+  border-left: 3px solid var(--lavender-deep);
+  box-shadow: 0 2px 16px rgba(122, 45, 107, 0.04);
+  transition: all 0.3s ease;
+}
+.community-card::before { content: none; } /* remove the top-bar hover from .exp-card */
+.community-card:hover {
+  transform: translateX(3px);
+  box-shadow: 0 8px 24px rgba(122, 45, 107, 0.08);
+  border-left-color: var(--rose);
+}
+
+@media (max-width: 700px) {
+  .community-grid { grid-template-columns: 1fr; }
+}
 
 .skills-section {
   background: linear-gradient(
