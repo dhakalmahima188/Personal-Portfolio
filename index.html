@@ -14,27 +14,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="./v2/css/style.css" />
   </head>
   <body>
     <nav id="navbar" class="hidden">
       <a href="#hero" class="nav-logo">mahima<span>.</span></a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Work</a></li>
-        <li><a href="#community">Community</a></li>
-        <li><a href="#awards">Awards</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <!-- <li><a href="#blogs">Blogs</a></li> -->
-        <li><a href="#hobbies">Hobbies</a></li>
-        <li><a href="#moments">Moments</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" data-de="Über mich">About</a></li>
+        <li><a href="#education" data-de="Grad">Education</a></li>
+        <li><a href="#experience" data-de="Werdegang">Work</a></li>
+        <li><a href="#community" data-de="Gemeinschaft">Community</a></li>
+        <li><a href="#awards" data-de="Auszeichnungen">Awards</a></li>
+        <li><a href="#skills" data-de="Fähigkeiten">Skills</a></li>
+        <li><a href="#projects" data-de="Projekte">Projects</a></li>
+        <li><a href="#hobbies" data-de="Hobbys">Hobbies</a></li>
+        <li><a href="#moments" data-de="Momente">Moments</a></li>
+        <li><a href="#contact" data-de="Kontakt">Contact</a></li>
       </ul>
       <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -42,55 +37,78 @@
     </nav>
 
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#about" onclick="closeMenu()">About</a>
-      <a href="#education" onclick="closeMenu()">Education</a>
-      <a href="#experience" onclick="closeMenu()">Work</a>
-      <a href="#community" onclick="closeMenu()">Community</a>
-      <a href="#awards" onclick="closeMenu()">Awards</a>
-      <a href="#skills" onclick="closeMenu()">Skills</a>
-      <a href="#projects" onclick="closeMenu()">Projects</a>
-      <!-- <a href="#blogs" onclick="closeMenu()">Blogs</a> -->
-      <a href="#hobbies" onclick="closeMenu()">Hobbies</a>
-      <a href="#moments" onclick="closeMenu()">Moments</a>
-      <a href="#contact" onclick="closeMenu()">Contact</a>
+      <a href="#about" onclick="closeMenu()" data-de="Über mich">About</a>
+      <a href="#education" onclick="closeMenu()" data-de="Grad"
+        >Education</a
+      >
+      <a href="#experience" onclick="closeMenu()" data-de="Werdegang">Work</a>
+      <a href="#community" onclick="closeMenu()" data-de="Gemeinschaft"
+        >Community</a
+      >
+      <a href="#awards" onclick="closeMenu()" data-de="Auszeichnungen"
+        >Awards</a
+      >
+      <a href="#skills" onclick="closeMenu()" data-de="Fähigkeiten">Skills</a>
+      <a href="#projects" onclick="closeMenu()" data-de="Projekte">Projects</a>
+      <a href="#hobbies" onclick="closeMenu()" data-de="Hobbys">Hobbies</a>
+      <a href="#moments" onclick="closeMenu()" data-de="Momente">Moments</a>
+      <a href="#contact" onclick="closeMenu()" data-de="Kontakt">Contact</a>
     </div>
 
     <section class="hero" id="hero">
       <div class="hero-content">
-        <p class="hero-greeting">hello, i'm</p>
-        <h1 class="hero-name">Mahima Dhakal</h1>
-        <p class="hero-tagline">
-          I am Software Engineer crafting meaningful technical solutions driven
-          by curiosity & a love for knowledge sharing.
+        <p class="hero-greeting" data-en="hello, i'm" data-de="hallo, ich bin">
+          hello, i'm
         </p>
+        <h1 class="hero-name" data-en="Mahima Dhakal" data-de="Mahima Dhakal">
+          Mahima Dhakal
+        </h1>
+        <div class="lang-switch" id="langToggle">
+          <span class="lang-opt en active">EN</span>
+          <span class="lang-divider">/</span>
+          <span class="lang-opt de">DE</span>
+        </div>
+        <p
+          class="hero-tagline"
+          data-en="I am a Software Engineer crafting meaningful technical solutions driven by curiosity & a love for knowledge sharing."
+          data-de="Als Softwareentwicklerin entwickle ich sinnvolle technische Lösungen, angetrieben von Neugier und der Freude am Wissensaustausch."
+        >
+          I am a Software Engineer crafting meaningful technical solutions
+          driven by curiosity & a love for knowledge sharing.
+        </p>
+
         <!-- <p class="hero-status">
-          <span class="status-dot"></span> Actively looking for opportunities in
-          Dortmund, Düsseldorf area &amp; remote in Germany.
-        </p> -->
+    <span class="status-dot"></span> Actively looking for opportunities in
+    Dortmund, Düsseldorf area &amp; remote in Germany.
+  </p> -->
         <div class="hero-cta">
           <a
             href="./v2/file/Mahima_Dhakal_Application_CV_2026.pdf"
             download
             class="btn-primary-custom"
           >
-            <i class="fas fa-arrow-down"></i> Download CV
-          </a>
+            <i class="fas fa-arrow-down"></i>
+            <span data-de="Lebenslauf herunterladen">Download CV</span></a
+          >
+
           <a href="#contact" class="btn-ghost">
-            <i class="far fa-paper-plane"></i> Say Hello
+            <i class="far fa-paper-plane"></i>
+            <span data-de="Sag Hallo">Say Hello</span>
           </a>
         </div>
-      </div>
-      <div class="scroll-hint">
-        <button
-          class="scroll-btn"
-          onclick="
-            document
-              .getElementById('about')
-              .scrollIntoView({ behavior: 'smooth' })
-          "
-        >
-          <i class="fas fa-chevron-down"></i>
-        </button>
+
+        <div class="scroll-hint">
+          <button
+            class="scroll-btn"
+            onclick="
+              document
+                .getElementById('about')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -104,9 +122,13 @@
           />
         </div>
         <div class="about-text">
-          <p class="section-label">About Me</p>
-          <h3>Passionate about building things that matter.</h3>
-          <p>
+          <p class="section-label" data-de="Über mich">About Me</p>
+          <h3 data-de="Mit Leidenschaft baue ich Dinge, die wirklich zählen.">
+            Passionate about building things that matter.
+          </h3>
+          <p
+            data-de="Man sagt, Ingenieurwesen dreht sich ums Lösen von Problemen; ich glaube, es geht auch darum, Möglichkeiten zu entdecken. Ich wandere gerne in neue Bereiche, verbinde die Punkte und teile meine Erkenntnisse mit Freude."
+          >
             They say engineering is all about solving problems, I think it's
             also about chasing possibilities.I wander into new fields, connect
             the dots, and find joy in sharing what I discover.
@@ -120,20 +142,28 @@
 
             <div class="about-detail">
               <i class="fas fa-map-marker-alt"></i>
-              <span>Dortmund, Germany</span>
+              <span data-de="Dortmund, Deutschland">Dortmund, Germany</span>
             </div>
           </div>
           <div class="about-badges">
             <span class="about-badge"
-              ><i class="fab fa-node-js"></i> Software Engineer</span
+              ><i class="fab fa-node-js"></i>
+              <span data-de="Softwareentwicklerin"
+                >Software Engineer</span
+              ></span
             >
             <span class="about-badge"
-              ><i class="fas fa-female"></i> Women in Tech Advocate</span
+              ><i class="fas fa-female"></i>
+              <span data-de="Fürsprecherin für Frauen in der Technik"
+                >Women in Tech Advocate</span
+              ></span
             >
 
             <span class="about-badge"
-              ><i class="fas fa-language"></i> Nepali · English (C1).
-              German(A2)</span
+              ><i class="fas fa-language"></i>
+              <span data-de="Nepali · Englisch (C1), Deutsch (A2)"
+                >Nepali · English (C1). German(A2)</span
+              ></span
             >
           </div>
         </div>
@@ -141,38 +171,54 @@
     </section>
 
     <section class="education-section" id="education">
-     <div class="section-header center reveal">
-        <p class="section-label">Academia</p>
-        <h2 class="section-title">Education</h2>
+      <div class="section-header center reveal">
+        <p class="section-label" data-de="Akademisches">Academia</p>
+        <h2 class="section-title" data-de="Akademischer Grad">Education</h2>
       </div>
       <div class="edu-timeline">
         <div class="edu-item reveal">
           <div class="edu-dot"><i class="fas fa-graduation-cap"></i></div>
           <div class="edu-card">
-            <p class="edu-year">Apr 2026 — Present</p>
-            <h4 class="edu-degree">Masters in Data Science</h4>
+            <p class="edu-year">
+              Apr 2026 <span data-de="bis heute">— Present</span>
+            </p>
+            <h4 class="edu-degree" data-de="Master in Data Science">
+              Masters in Data Science
+            </h4>
             <p class="edu-school">TU Dortmund University, Dortmund, Germany</p>
-            <span class="edu-grade">First Semester</span>
+            <span class="edu-grade" data-de="Erstes Semester"
+              >First Semester</span
+            >
           </div>
         </div>
         <div class="edu-item reveal">
           <div class="edu-dot"><i class="fas fa-graduation-cap"></i></div>
           <div class="edu-card">
             <p class="edu-year">2019 — 2024</p>
-            <h4 class="edu-degree">Bachelors in Computer Engineering</h4>
+            <h4 class="edu-degree" data-de="Bachelor in Informatik">
+              Bachelors in Computer Engineering
+            </h4>
             <p class="edu-school">
-              Tribhuvan University, IOE — Pulchowk Campus, Lalitpur
+              Tribhuvan University, IOE, Pulchowk Campus, Lalitpur
             </p>
-            <span class="edu-grade">Cum Laude · 82.44% · Top 1% graduate</span>
+            <span
+              class="edu-grade"
+              data-de="Cum Laude, 82,44 %, Top 1 % Abschluss"
+              >Cum Laude · 82.44% · Top 1% graduate</span
+            >
           </div>
         </div>
         <div class="edu-item reveal">
           <div class="edu-dot"><i class="fas fa-book"></i></div>
           <div class="edu-card">
             <p class="edu-year">2017 — 2019</p>
-            <h4 class="edu-degree">Major in Physics & Mathematics</h4>
+            <h4 class="edu-degree" data-de="Schwerpunkt Physik und Mathematik">
+              Major in Physics & Mathematics
+            </h4>
             <p class="edu-school">Tilottama Secondary School, Yogikuti</p>
-            <span class="edu-grade"
+            <span
+              class="edu-grade"
+              data-de="Cum Laude, GPA 3,86, landesweit Platz 2 in Nepal 🏆"
               >Cum Laude · CGPA 3.86 · All Nepal Rank 2nd 🏆</span
             >
           </div>
@@ -181,9 +227,13 @@
           <div class="edu-dot"><i class="fas fa-school"></i></div>
           <div class="edu-card">
             <p class="edu-year">2003-2017</p>
-            <h4 class="edu-degree">Primary & Lower Secondary School</h4>
+            <h4 class="edu-degree" data-de="Grund und Unterstufenschule">
+              Primary & Lower Secondary School
+            </h4>
             <p class="edu-school">Tilottama Secondary School</p>
-            <span class="edu-grade">Cum Laude, CGPA: 3.8 </span>
+            <span class="edu-grade" data-de="Cum Laude, GPA 3,8"
+              >Cum Laude, CGPA: 3.8
+            </span>
           </div>
         </div>
       </div>
@@ -191,8 +241,10 @@
 
     <section class="experience-section" id="experience">
       <div class="section-header center reveal">
-        <p class="section-label">Work</p>
-        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-label" data-de="Werdegang">Work</p>
+        <h2 class="section-title" data-de="Berufserfahrung">
+          Professional Experience
+        </h2>
       </div>
       <div class="exp-ledger">
         <div class="exp-row current">
@@ -200,7 +252,10 @@
           <div class="exp-row-body">
             <h4 class="exp-role">Werkstudent, Software Engineer</h4>
             <p class="exp-company">Volkswagen Infotainment GmbH</p>
-            <ul class="exp-desc">
+            <ul
+              class="exp-desc"
+              data-de="Tätig in der Abteilung Software Administration, Prozesse und Tools. Beiträge folgen. :)"
+            >
               Working in the Software Administration, Process and Tools
               department. Loading contributions. :)
             </ul>
@@ -210,38 +265,52 @@
         <div class="exp-row">
           <div class="exp-row-year">Feb 2024 — May 2026</div>
           <div class="exp-row-body">
-            <h4 class="exp-role">Software Engineer</h4>
+            <h4 class="exp-role" data-de="Softwareentwicklerin">
+              Software Engineer
+            </h4>
             <p class="exp-company">
               Growthzilla Inc. — California, US (Remote)
             </p>
             <ul class="exp-desc">
-              <li>
+              <li
+                data-de="Agentische KI Tools mit Cloudflare MCP und LLMs entwickelt und integriert, um dynamische Anfragen zu automatisieren; Systemkonfigurationen und Parametereinstellungen optimiert."
+              >
                 Architected and integrated Agentic AI tools using Cloudflare MCP
                 and LLMs to automate dynamic query handling; streamlined system
                 configurations and automated parameter adjustments.
               </li>
-              <li>
+              <li
+                data-de="Nahtlose Zahlungslösungen entwickelt durch Integration von XplorePay (früher Clearent) in bestehende Buchungssysteme, wodurch Buchhaltung und Transaktionsabläufe vereinheitlicht wurden."
+              >
                 Engineered seamless payment solutions by integrating XplorePay
                 (formerly Clearent) into existing booking systems, unifying
                 accounting and transaction workflows.
               </li>
-              <li>
+              <li
+                data-de="Eine Predictive Analytics Engine gebaut, die Nutzerverhalten und Systemdaten nutzt, um Nutzer algorithmisch zu bewerten und zu segmentieren; direkt einfließend in Produkt und Marketingentscheidungen."
+              >
                 Built a predictive analytics engine using user behaviour and
                 system data to algorithmically score and segment users, directly
                 informing product and marketing decisions.
               </li>
-              <li>
+              <li
+                data-de="Robuste Datensynchronisationspipelines zwischen Buchhaltungssoftware und Salon Management Systemen entwickelt, mit fortgeschrittener Retry Logik und Fehlerbehandlung für vollständige Datenkonsistenz."
+              >
                 Developed robust data synchronization pipelines between
                 accounting software and salon management systems, implementing
                 advanced retry logic and error handling to ensure 100% data
                 consistency.
               </li>
-              <li>
+              <li
+                data-de="Betriebliche Effizienz durch automatisierte Workflows und Echtzeit Kommunikationsfunktionen gesteigert, wodurch manueller Aufwand reduziert und die Systemreaktion verbessert wurde."
+              >
                 Optimized operational efficiency by building automated workflows
                 and real-time communication features, reducing manual
                 intervention and improving system responsiveness.
               </li>
-              <li>
+              <li
+                data-de="Einen modernen Tech Stack (React, Express, SQL, Python, Redis) eingesetzt, um skalierbare, performante Webanwendungen für konkrete Geschäftsanforderungen zu entwickeln."
+              >
                 Leveraged a modern tech stack (React, Express, SQL, Python,
                 Redis) to design and deploy scalable, high-performance web
                 applications tailored to business needs.
@@ -253,14 +322,20 @@
         <div class="exp-row">
           <div class="exp-row-year">May — Jul 2023</div>
           <div class="exp-row-body">
-            <h4 class="exp-role">Backend Engineering Trainee</h4>
+            <h4 class="exp-role" data-de="Praktikantin Backend Entwicklung">
+              Backend Engineering Trainee
+            </h4>
             <p class="exp-company">UxCam Pvt. Ltd. — Kathmandu</p>
             <ul class="exp-desc">
-              <li>
+              <li
+                data-de="Skalierbare RESTful APIs mit effizienter Server Client Kommunikation in Python entwickelt."
+              >
                 Developed scalable RESTful APIs with efficient server-client
                 interactions in Python.
               </li>
-              <li>
+              <li
+                data-de="Kontrolle über Datenbankoperationen verbessert und Performance optimiert."
+              >
                 Enhanced control over database operations and performance
                 optimization.
               </li>
@@ -272,10 +347,17 @@
 
     <section class="community-section" id="community">
       <div class="section-header center reveal">
-        <p class="section-label">Fellowships & Community</p>
-        <h2 class="section-title">Beyond the Desk</h2>
-        <p class="section-desc">
-          Scholarships, fellowships, volunteering & the communities that shaped
+        <p class="section-label" data-de="Stipendien & Gemeinschaft">
+          Fellowships & Community
+        </p>
+        <h2 class="section-title" data-de="Jenseits des Schreibtischs">
+          Beyond the Desk
+        </h2>
+        <p
+          class="section-desc"
+          data-de="Stipendien, Fellowships, Ehrenamt und  Gemeinschaften, die mich geprägt"
+        >
+          Scholarships, fellowships, volunteering &  communities that shaped
           me
         </p>
       </div>
@@ -283,19 +365,27 @@
         <div class="community-chip reveal">
           <div class="chip-icon"><i class="fas fa-video"></i></div>
           <p class="chip-year">2023 – 2024</p>
-          <h4 class="chip-role">Creative Director</h4>
+          <h4 class="chip-role" data-de="Kreativdirektorin">
+            Creative Director
+          </h4>
           <p class="chip-org">LOCUS 2024, National Technological Festival</p>
           <ul class="chip-desc">
-            <li>
+            <li
+              data-de="Die 20. Ausgabe von Nepals größtem Tech Festival organisiert und studentische Innovationen im ganzen Land gefördert, mit Vorveranstaltungen wie Girls To Code, CodeCamp und Hack A Week"
+            >
               Organized the 20th edition of Nepal's largest tech fest,
               facilitating student-led innovations across the country, with
               pre-events like Girls To Code, CodeCamp & Hack-A-Week
             </li>
-            <li>
+            <li
+              data-de="Kreativteam geleitet für innovatives Design, Fotografie, Videografie und Content Strategien"
+            >
               Led creative team driving innovative design, photography,
               videography & content strategies
             </li>
-            <li>
+            <li
+              data-de="Das Children in Technology Programm über alle 7 Provinzen mit mehr als 100 Schulen koordiniert, zur Förderung digitaler Kompetenz und Internetsicherheit"
+            >
               Coordinated Children in Technology program across all 7 provinces
               with 100+ schools promoting digital literacy and internet safety
             </li>
@@ -305,15 +395,19 @@
         <div class="community-chip reveal">
           <div class="chip-icon"><i class="fas fa-brain"></i></div>
           <p class="chip-year">Dec 2022 – Jun 2023</p>
-          <h4 class="chip-role">Scholar in Fellowships</h4>
+          <h4 class="chip-role" data-de="Stipendiatin">
+            Scholar in Fellowships
+          </h4>
 
           <div class="chip-sub">
             <p class="chip-org">
               Samsung Innovation Campus, Samsung Electronics
             </p>
             <ul class="chip-desc">
-              <li>
-                Selected for Samsung’s flagship global upskilling programme
+              <li
+                data-de="Ausgewählt für Samsungs weltweites Weiterbildungsprogramm in über 40 Ländern; vertiefte Kurse in KI, Big Data und Python; Abschlussprojekt zu realen gesellschaftlichen Herausforderungen."
+              >
+                Selected for Samsung's flagship global upskilling programme
                 delivered across 40+ countries; advanced coursework in AI, Big
                 Data, and Python; capstone project addressing real-world social
                 challenges.
@@ -324,7 +418,9 @@
           <div class="chip-sub">
             <p class="chip-org">4th National AI School — NAAMII</p>
             <ul class="chip-desc">
-              <li>
+              <li
+                data-de="Kompetitiv ausgewählt für ein intensives KI und ML Programm zu Deep Learning, Transformern, Computer Vision, NLP und GNNs."
+              >
                 Competitively selected for an intensive AI/ML programme covering
                 deep learning, transformers, computer vision, NLP & GNNs.
               </li>
@@ -335,19 +431,27 @@
         <div class="community-chip reveal">
           <div class="chip-icon"><i class="fas fa-heart"></i></div>
           <p class="chip-year">2021 · 2025</p>
-          <h4 class="chip-role">Fellow & Mentor</h4>
+          <h4 class="chip-role" data-de="Fellow und Mentorin">
+            Fellow & Mentor
+          </h4>
           <p class="chip-org">Women Leaders in Technology (WLiT)</p>
           <ul class="chip-desc">
-            <li>
-              Completed a rigorous MERN bootcamp along with leadership workshops &
-              team projects
+            <li
+              data-de="Ein intensives MERN Bootcamp samt Führungsworkshops und Teamprojekten abgeschlossen"
+            >
+              Completed a rigorous MERN bootcamp along with leadership workshops
+              & team projects
             </li>
-            <li>
+            <li
+              data-de="Hour of Code für Grundschulkinder durchgeführt, um sie an Technik heranzuführen und zu zeigen, wie spannend das Feld ist :) . Hat riesigen Spaß gemacht."
+            >
               Facilitated Hour of Code for primary-level students to introduce
               them to tech and show how cool things are happening with it :) .
               Preety Fun.
             </li>
-            <li>
+            <li
+              data-de="Den Pokhara Jahrgang 2025 betreut und praxisnahe JS, Node und Express Workshops geleitet sowie einen Hackathon organisiert."
+            >
               Mentored the 2025 Pokhara cohort and facilitated hands-on JS, Node
               & Express workshops and organized hackathon.
             </li>
@@ -358,16 +462,23 @@
 
     <section class="awards-section" id="awards">
       <div class="section-header center reveal">
-        <p class="section-label">Recognition</p>
-        <h2 class="section-title">Honours & Awards</h2>
+        <p class="section-label" data-de="Anerkennung">Recognition</p>
+        <h2 class="section-title" data-de="Ehrungen & Auszeichnungen">
+          Honours & Awards
+        </h2>
       </div>
       <div class="awards-showcase">
         <div class="award-hero reveal">
           <div class="award-hero-icon"><i class="fas fa-star"></i></div>
           <p class="award-year">2019</p>
-          <h4 class="award-title">National Science Award</h4>
+          <h4 class="award-title" data-de="Nationaler Wissenschaftspreis">
+            National Science Award
+          </h4>
           <p class="award-org">Ministry of National Science & Technology</p>
-          <p class="award-desc">
+          <p
+            class="award-desc"
+            data-de="Landesbeste in der Provinz Lumbini im Fach +2 Science (GPA 3,86). Verliehen am 7. Nationalen Wissenschaftstag für herausragende akademische Leistungen."
+          >
             Provincial Topper, Lumbini Province in +2 Science (CGPA 3.86).
             Awarded on the 7th National Science Day for academic excellence.
           </p>
@@ -378,11 +489,20 @@
             <span class="award-row-icon"><i class="fas fa-trophy"></i></span>
             <div class="award-row-body">
               <p class="award-row-year">2023</p>
-              <h4 class="award-row-title">Winner, Hack A Week & Code Camp</h4>
+              <h4
+                class="award-row-title"
+                data-de="Gewinnerin, Hack A Week & Code Camp"
+              >
+                Winner, Hack A Week & Code Camp
+              </h4>
               <p class="award-row-org">LOCUS 2023</p>
-              <p class="award-row-desc">
+              <p
+                class="award-row-desc"
+                data-de="Einen einwöchigen landesweiten Hackathon in der Kategorie Digital Health gewonnen sowie ein zweitägiges CodeCamp in der offenen Kategorie bei LOCUS 2023, im Wettbewerb mit Teilnehmenden aus dem ganzen Land."
+              >
                 Won a week-long national-level hackathon under the digital
-                health category and  2 days codecamp  in Open Category in LOCUS 2023 competing among participants from all over the country.
+                health category and 2 days codecamp in Open Category in LOCUS
+                2023 competing among participants from all over the country.
               </p>
             </div>
           </div>
@@ -391,9 +511,14 @@
             <span class="award-row-icon"><i class="fas fa-award"></i></span>
             <div class="award-row-body">
               <p class="award-row-year">2020 — 2024</p>
-              <h4 class="award-row-title">Golden Jubilee Scholarship</h4>
+              <h4 class="award-row-title" data-de="Golden Jubilee Stipendium">
+                Golden Jubilee Scholarship
+              </h4>
               <p class="award-row-org">Embassy of India</p>
-              <p class="award-row-desc">
+              <p
+                class="award-row-desc"
+                data-de="Ausgezeichnet für herausragende akademische Leistungen im Rahmen des India Nepal Diplomatiestipendiums, mit jährlicher Förderung über vier Jahre des Bachelorstudiums."
+              >
                 Honored for exceptional academic achievements under the
                 India-Nepal diplomatic scholarship program, annual grant
                 throughout four years of undergraduate study.
@@ -407,9 +532,14 @@
             ></span>
             <div class="award-row-body">
               <p class="award-row-year">2019</p>
-              <h4 class="award-row-title">Full Scholarship Recipient</h4>
+              <h4 class="award-row-title" data-de="Vollstipendiatin">
+                Full Scholarship Recipient
+              </h4>
               <p class="award-row-org">IOE, Pulchowk Campus</p>
-              <p class="award-row-desc">
+              <p
+                class="award-row-desc"
+                data-de="Leistungsstipendium für Platz 128 unter 15.000 Bewerbenden in der Aufnahmeprüfung."
+              >
                 Merit scholarship for securing 128th rank among 15,000
                 candidates in the entrance examination.
               </p>
@@ -421,9 +551,14 @@
 
     <section class="skills-section" id="skills">
       <div class="section-header center reveal">
-        <p class="section-label">Tech Stack</p>
-        <h2 class="section-title">Skills & Interests</h2>
-        <p class="section-desc">
+        <p class="section-label" data-de="Technologien">Tech Stack</p>
+        <h2 class="section-title" data-de="Fähigkeiten & Interessen">
+          Skills & Interests
+        </h2>
+        <p
+          class="section-desc"
+          data-de="Technologien, mit denen ich gerne arbeite und die ich stets weiter erkunde"
+        >
           Technologies I love working with and keep exploring
         </p>
       </div>
@@ -447,9 +582,6 @@
         <div class="skill-pill"><i class="fas fa-brain"></i> Deep Learning</div>
         <div class="skill-pill"><i class="fas fa-table"></i> Pandas</div>
         <div class="skill-pill"><i class="fas fa-calculator"></i> NumPy</div>
-        <!-- <div class="skill-pill">
-          <i class="fas fa-chart-line"></i> Matplotlib
-        </div> -->
         <div class="skill-pill"><i class="fas fa-flask"></i> Scikit-learn</div>
         <div class="skill-pill"><i class="fas fa-layer-group"></i> Redis</div>
         <div class="skill-pill">
@@ -462,15 +594,20 @@
 
     <section class="projects-section" id="projects">
       <div class="section-header center reveal">
-        <p class="section-label">Portfolio</p>
-        <h2 class="section-title">Things I've Built</h2>
+        <p class="section-label" data-de="Portfolio">Portfolio</p>
+        <h2 class="section-title" data-de="Was ich gebaut habe">
+          Things I've Built
+        </h2>
       </div>
       <div class="projects-grid">
         <div class="project-card reveal">
           <span class="project-number">01</span>
           <h4 class="project-name">Grievance Recognition</h4>
           <p class="project-type">Undergraduate Research Thesis · 2023–2024</p>
-          <p class="project-desc-text">
+          <p
+            class="project-desc-text"
+            data-de="Intelligentes Klassifizierungssystem für die nepalesische Regierung, zur Vereinfachung der Beschwerdebearbeitung mittels nepalesischem Text und Sprache."
+          >
             Intelligent classification system for the Nepal government to
             streamline complaint handling using Nepali text & speech.
           </p>
@@ -493,7 +630,10 @@
           <span class="project-number">02</span>
           <h4 class="project-name">YOGGIS</h4>
           <p class="project-type">Academic Minor Project · 2022–2023</p>
-          <p class="project-desc-text">
+          <p
+            class="project-desc-text"
+            data-de="Webbasierter KI Yogatrainer mit Echtzeit Feedback zu Yogaposen und Haltungskorrekturen mittels Computer Vision."
+          >
             Web-based AI yoga trainer that provides real-time feedback on yoga
             poses performed by the user, with posture correction recommendations
             using computer vision.
@@ -517,7 +657,10 @@
           <span class="project-number">03</span>
           <h4 class="project-name">Pulchowk Campus Network</h4>
           <p class="project-type">Network Architecture · 2023</p>
-          <p class="project-desc-text">
+          <p
+            class="project-desc-text"
+            data-de="Skalierbare Simulation eines Campusnetzwerks mit dynamischem Routing, VLAN basierter Verkehrstrennung, DNS und strukturiertem Subnetting in Cisco Packet Tracer."
+          >
             Scalable campus network simulation with dynamic routing, VLAN-based
             traffic isolation, DNS & structured subnetting in Cisco Packet
             Tracer.
@@ -541,7 +684,10 @@
           <span class="project-number">04</span>
           <h4 class="project-name">ASK-OUT</h4>
           <p class="project-type">WLiT Project · 2021</p>
-          <p class="project-desc-text">
+          <p
+            class="project-desc-text"
+            data-de="Eine webbasierte Anwendung, die Kolleg:innen an einem Arbeitsplatz eine anonyme Frage und Antwort Plattform bietet."
+          >
             A web-based application that provides a question-and-answer platform
             to the group of people working together in a workplace anonymously.
           </p>
@@ -558,7 +704,10 @@
           <span class="project-number">05</span>
           <h4 class="project-name">AAWAJ</h4>
           <p class="project-type">OOP Project · 2022</p>
-          <p class="project-desc-text">
+          <p
+            class="project-desc-text"
+            data-de="Eine konsolenbasierte Social Media Anwendung mit Funktionen für Kommunikation und Vernetzung."
+          >
             A console-based social media application with features for
             communication and networking.
           </p>
@@ -575,7 +724,10 @@
           <span class="project-number">06</span>
           <h4 class="project-name">23EA Messenger</h4>
           <p class="project-type">Huffman Compression</p>
-          <p class="project-desc-text">
+          <p
+            class="project-desc-text"
+            data-de="Nachrichtenkomprimierung mittels Huffman Codierung in C++."
+          >
             Message compression using Huffman Encoding in C++.
           </p>
           <div class="project-links">
@@ -590,61 +742,14 @@
       </div>
     </section>
 
-    <!-- <section class="blogs-section" id="blogs">
-      <div class="section-header center reveal">
-        <p class="section-label">Writing</p>
-        <h2 class="section-title">Blog & Notes</h2>
-      </div>
-      <div class="blogs-grid">
-        <a
-          class="blog-card reveal"
-          href="https://www.canva.com/design/DAGlzQXY1wE/gTVbCBzOsUCtonSkwsO_RA/view"
-          target="_blank"
-        >
-          <div class="blog-card-gradient">
-            <span class="blog-number">01</span>
-          </div>
-          <div class="blog-card-body">
-            <p class="blog-tag">Deep Dive</p>
-            <h4 class="blog-title">Asynchronous Programming</h4>
-            <p class="blog-date">12 July 2025</p>
-          </div>
-        </a>
-        <a
-          class="blog-card reveal"
-          href="https://www.canva.com/design/DAGm1QAKAFM/jvVSnAbqGwh6U7jAe-Fh6w/view"
-          target="_blank"
-        >
-          <div class="blog-card-gradient">
-            <span class="blog-number">02</span>
-          </div>
-          <div class="blog-card-body">
-            <p class="blog-tag">Backend</p>
-            <h4 class="blog-title">JavaScript as Backend</h4>
-            <p class="blog-date">12 July 2025</p>
-          </div>
-        </a>
-        <a
-          class="blog-card reveal"
-          href="https://dhakalmahima188.github.io/Pulchowk-Campus-Network-Design/"
-          target="_blank"
-        >
-          <div class="blog-card-gradient">
-            <span class="blog-number">03</span>
-          </div>
-          <div class="blog-card-body">
-            <p class="blog-tag">Networks</p>
-            <h4 class="blog-title">Network Design</h4>
-            <p class="blog-date">30 Aug 2023</p>
-          </div>
-        </a>
-      </div>
-    </section> -->
-
     <section class="hobbies-section" id="hobbies">
       <div class="section-header center reveal">
-        <p class="section-label">Beyond Computers & Bits</p>
-        <h2 class="section-title">Things I Love</h2>
+        <p class="section-label" data-de="Jenseits von Computern und Bits">
+          Beyond Computers & Bits
+        </p>
+        <h2 class="section-title" data-de="Dinge, die ich liebe">
+          Things I Love
+        </h2>
       </div>
 
       <div class="hobbies-grid">
@@ -652,12 +757,14 @@
           <div class="poetry-visual">
             <img src="./v2/img/hobbies/poetry.jpg" alt="Poetry" />
             <div class="poetry-visual-overlay">
-              <h4>Writing Poetry</h4>
+              <h4 data-de="Gedichte schreiben">Writing Poetry</h4>
               <p>शब्दहरूमा बुनिएका भावनाहरू</p>
             </div>
           </div>
           <div class="poetry-reader">
-            <p class="poetry-reader-label">Written with love <3</p>
+            <p class="poetry-reader-label" data-de="Mit Liebe geschrieben <3">
+              Written with love <3
+            </p>
             <div class="poem-carousel">
               <div class="poem-track" id="poemTrack">
                 <div class="poem-slide">
@@ -759,7 +866,8 @@
               <i class="fas fa-mountain"></i><span>4,400m · Kyanjin Ri</span>
             </div>
             <div class="trek-stat">
-              <i class="fas fa-route"></i><span>~65 km Trail</span>
+              <i class="fas fa-route"></i
+              ><span>~65 km <span data-de="Strecke">Trail</span></span>
             </div>
             <div class="trek-stat">
               <i class="fas fa-calendar-alt"></i><span>22–25 Jan 2026</span>
@@ -779,7 +887,10 @@
           >
             Kathmandu → Syafru → Bamboo → Langtang Valley → Gompa → Kyanjin Ri
           </p>
-          <p class="trek-experience">
+          <p
+            class="trek-experience"
+            data-de="Riskante Wege, doch jeder Schritt trug eine eigene Schönheit in sich. Mit der besten Truppe über die Jhalunge Hängebrücken am Langtang Khola, während der Lirung Gipfel bei jedem Zeitraffer näher rückte, mit einer ganz eigenen Magie. Ein Spaziergang durch das alte Langtang Valley; die gesamte Siedlung wurde 2015 durch die massive Fels und Eislawine beim Erdbeben zerstört, und heute zu sehen, wie sie vollständig aus dem Wiederaufbau hervorgegangen ist, schöner und stärker als je zuvor. Langtang, du bist die Mühe wert."
+          >
             Risky roads, yet each step carrying a different kind of beauty.
             Crossing the Jhalunge suspension bridges over Langtang Khola with
             the best crew, watching Lirung peak get closer with a different kind
@@ -789,7 +900,9 @@
             from "recovery mode," back, beautiful, and better than ever.
             Langtang, you're worth the struggle.
           </p>
-          <p class="trek-gallery-label">Gallery Langtang Diaries</p>
+          <p class="trek-gallery-label" data-de="Galerie: Langtang Tagebuch">
+            Gallery Langtang Diaries
+          </p>
           <div class="trek-gallery">
             <div class="trek-gallery-item featured" onclick="openLightbox(0)">
               <img
@@ -854,8 +967,10 @@
 
     <section class="moments-section" id="moments">
       <div class="section-header center reveal">
-        <p class="section-label">Gallery</p>
-        <h2 class="section-title">Captured Moments</h2>
+        <p class="section-label" data-de="Galerie">Gallery</p>
+        <h2 class="section-title" data-de="Eingefangene Momente">
+          Captured Moments
+        </h2>
       </div>
       <div class="moments-carousel reveal">
         <div class="moments-track" id="momentsTrack">
@@ -866,7 +981,9 @@
               class="moment-img"
             />
             <div class="moment-overlay">
-              <h4>Mentoring WLiT Cohort 2025</h4>
+              <h4 data-de="Mentorin für WLiT Jahrgang 2025">
+                Mentoring WLiT Cohort 2025
+              </h4>
               <p>Pokhara</p>
             </div>
           </div>
@@ -877,8 +994,12 @@
               class="moment-img"
             />
             <div class="moment-overlay">
-              <h4>Hack a Week, Winner 🏆</h4>
-              <p>Digital Health Category, 2023</p>
+              <h4 data-de="Hack a Week, Gewinnerin 🏆">
+                Hack a Week, Winner 🏆
+              </h4>
+              <p data-de="Kategorie Digital Health, 2023">
+                Digital Health Category, 2023
+              </p>
             </div>
           </div>
           <div class="moment-slide">
@@ -888,7 +1009,9 @@
               class="moment-img"
             />
             <div class="moment-overlay">
-              <h4>Organizing Girls to Code</h4>
+              <h4 data-de="Organisation von Girls to Code">
+                Organizing Girls to Code
+              </h4>
               <p>LOCUS 2023</p>
             </div>
           </div>
@@ -899,7 +1022,9 @@
               class="moment-img"
             />
             <div class="moment-overlay">
-              <h4>Mentoring Software Fellowship</h4>
+              <h4 data-de="Mentorin für die Software Fellowship">
+                Mentoring Software Fellowship
+              </h4>
               <p>LOCUS 2024</p>
             </div>
           </div>
@@ -910,19 +1035,23 @@
               class="moment-img"
             />
             <div class="moment-overlay">
-              <h4>UXCAM CodeCamp, Winner</h4>
+              <h4>UXCAM CodeCamp, <span data-de="Gewinnerin">Winner</span></h4>
               <p>LOCUS 2023</p>
             </div>
           </div>
-           <div class="moment-slide">
+          <div class="moment-slide">
             <img
               src="./v2/img/moments/meandmountains.jpg"
               alt=""
               class="moment-img"
             />
             <div class="moment-overlay">
-              <h4>Visit NEPAL</h4>
-              <p>If you came upto this, you should visit HIMALAYAS in NEPAL!</p>
+              <h4 data-de="Besuch in NEPAL">Visit NEPAL</h4>
+              <p
+                data-de="Wenn du bis hierhin gekommen bist, solltest du das HIMALAYA Gebirge in NEPAL besuchen!"
+              >
+                If you came upto this, you should visit HIMALAYAS in NEPAL!
+              </p>
             </div>
           </div>
           <div class="moment-slide">
@@ -932,7 +1061,7 @@
               class="moment-img"
             />
             <div class="moment-overlay">
-              <h4>First Hackathon ✨</h4>
+              <h4 data-de="Erster Hackathon ✨">First Hackathon ✨</h4>
               <p>Team Trinamic Trio</p>
             </div>
           </div>
@@ -943,7 +1072,9 @@
               class="moment-img"
             />
             <div class="moment-overlay">
-              <h4>Creative Director @ LOCUS 2024</h4>
+              <h4 data-de="Kreativdirektorin bei LOCUS 2024">
+                Creative Director @ LOCUS 2024
+              </h4>
               <p>National Technological Festival</p>
             </div>
           </div>
@@ -954,8 +1085,12 @@
               class="moment-img"
             />
             <div class="moment-overlay">
-              <h4>Enjoying && sharing</h4>
-              <p>Love to give back the community that Shaped me.</p>
+              <h4 data-de="Genießen und teilen">Enjoying && sharing</h4>
+              <p
+                data-de="Ich gebe gerne etwas an die Gemeinschaft zurück, die mich geprägt hat."
+              >
+                Love to give back the community that Shaped me.
+              </p>
             </div>
           </div>
           <div class="moment-slide">
@@ -965,14 +1100,14 @@
               class="moment-img"
             />
             <div class="moment-overlay">
-              <h4>Children in Technology</h4>
+              <h4 data-de="Children in Technology">Children in Technology</h4>
               <p>Janakpur</p>
             </div>
           </div>
           <div class="moment-slide">
             <img src="./v2/img/moments/naami.jpeg" alt="" class="moment-img" />
             <div class="moment-overlay">
-              <h4>4th Annual AI School</h4>
+              <h4 data-de="4. Jährliche KI Schule">4th Annual AI School</h4>
               <p>NAAMII · ANAIS</p>
             </div>
           </div>
@@ -990,8 +1125,11 @@
     </section>
 
     <section class="contact-section" id="contact">
-      <h2 class="contact-title">Let's Connect</h2>
-      <p class="contact-subtitle">
+      <h2 class="contact-title" data-de="Lass uns verbinden">Let's Connect</h2>
+      <p
+        class="contact-subtitle"
+        data-de="Ich baue meinen Teil der Techrevolution von Nepal aus.<br />Ob Hilferuf, Idee oder einfach ein Hallo, mein Postfach steht immer offen."
+      >
         Building my piece of the tech revolution from Nepal.<br />
         Whether it's a help call, idea or just a hello, my inbox is always open.
       </p>
@@ -1042,5 +1180,33 @@
     </button>
 
     <script src="v2/js/index.js"></script>
+    <script>
+      (function () {
+        const toggle = document.getElementById("langToggle");
+        const nodes = document.querySelectorAll("[data-de]");
+
+        nodes.forEach((el) => {
+          if (!el.dataset.en) {
+            el.dataset.en = el.innerHTML;
+          }
+        });
+
+        let isGerman = false;
+
+        toggle.addEventListener("click", () => {
+          isGerman = !isGerman;
+          toggle
+            .querySelector(".lang-opt.en")
+            .classList.toggle("active", !isGerman);
+          toggle
+            .querySelector(".lang-opt.de")
+            .classList.toggle("active", isGerman);
+
+          nodes.forEach((el) => {
+            el.innerHTML = isGerman ? el.dataset.de : el.dataset.en;
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
