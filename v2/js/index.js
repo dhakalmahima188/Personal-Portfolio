@@ -75,6 +75,7 @@ const lightboxImg = document.getElementById("lightboxImg");
 const lightboxCaption = document.getElementById("lightboxCaption");
 let lightboxIndex = 0;
 
+
 function openLightbox(i) {
   lightboxIndex = i;
   lightboxImg.src = galleryImages[i].src;
