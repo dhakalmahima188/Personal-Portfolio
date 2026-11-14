@@ -788,6 +788,29 @@ section {
   border: 1px solid rgba(232, 213, 245, 0.5);
   transition: all 0.3s ease;
 }
+.edu-card-university,
+.edu-card-school {
+  position: relative;
+  padding-right: 110px;
+}
+.edu-university-logo,
+.edu-institution-mark {
+  position: absolute;
+  top: 50%;
+  right: 1.8rem;
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+  transform: translateY(-50%);
+}
+.edu-institution-mark {
+  display: grid;
+  place-items: center;
+  color: var(--lavender-deep);
+  font-size: 3rem;
+}
 .edu-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(122, 45, 107, 0.08);
@@ -951,20 +974,20 @@ section {
   text-decoration: none;
 }
 .exp-company-logo {
-  width: 40px;
-  height: 40px;
+  width: 34px;
+  height: 34px;
   flex: none;
   object-fit: contain;
-  opacity: 0.72;
+  opacity: 0.52;
   mix-blend-mode: multiply;
   transition: opacity 0.2s ease;
 }
 .exp-company-link:hover .exp-company-logo,
 .exp-company-link:focus-visible .exp-company-logo {
-  opacity: 1;
+  opacity: 0.8;
 }
 .exp-company-logo-wide {
-  width: 96px;
+  width: 82px;
 }
 .exp-company-logo-vw {
   border-radius: 50%;
@@ -2440,5 +2463,18 @@ section {
   }
   .edu-item {
     gap: 0;
+  }
+  .edu-card-university,
+  .edu-card-school {
+    padding-right: 78px;
+  }
+  .edu-university-logo,
+  .edu-institution-mark {
+    right: 1rem;
+    width: 48px;
+    height: 48px;
+  }
+  .edu-institution-mark {
+    font-size: 2rem;
   }
 }
