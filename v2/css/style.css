@@ -1942,6 +1942,75 @@ section {
   border: 1px solid rgba(232, 213, 245, 0.4);
   transition: all 0.4s ease;
 }
+.trek-carousel {
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.trek-carousel-track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.trek-slide {
+  min-width: 100%;
+  margin: 0;
+}
+.trek-carousel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin: 1.5rem 0 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+.trek-carousel-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--lavender);
+  background: white;
+  color: var(--rose);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.trek-carousel-btn:hover {
+  background: var(--rose);
+  border-color: var(--rose);
+  color: white;
+  transform: translateY(-2px);
+}
+.trek-carousel-counter {
+  min-width: 42px;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.08em;
+}
+.germany-hero {
+  background: linear-gradient(135deg, #d6c4e8, #aebfd7 55%, #e6b8c5);
+}
+.travel-image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  color: var(--rose);
+  background: linear-gradient(135deg, var(--blush-light), var(--lavender));
+  text-align: center;
+  cursor: default;
+}
+.travel-image-placeholder i {
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+.travel-image-placeholder span {
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
 .trek-card:hover {
   box-shadow: 0 20px 50px rgba(122, 45, 107, 0.1);
 }

@@ -55,7 +55,6 @@
 
     <section class="hero" id="hero">
       <div class="hero-content">
-            </h1>
         <div class="lang-switch" id="langToggle">
           <span class="lang-opt en active">EN</span>
           <span class="lang-divider">/</span>
@@ -1038,107 +1037,238 @@
         </div>
       </div>
 
-      <div class="trek-card reveal" style="margin-top: 2rem">
-        <div class="trek-hero">
-          <img
-            src="./v2/img/treks/langtang/langtang-0.jpg"
-            alt="Langtang Valley Trek"
-          />
-          <div class="trek-hero-overlay">
-            <div class="trek-badge">
-              <i class="fas fa-mountain"></i> Jan 2026
+      <div class="trek-carousel reveal" style="margin-top: 2rem">
+        <div class="trek-carousel-track" id="trekTrack">
+          <div class="trek-card trek-slide">
+            <div class="trek-hero">
+              <img
+                src="./v2/img/treks/langtang/langtang-0.jpg"
+                alt="Langtang Valley Trek"
+              />
+              <div class="trek-hero-overlay">
+                <div class="trek-badge">
+                  <i class="fas fa-mountain"></i> Jan 2026
+                </div>
+                <h2 class="trek-hero-title">Langtang Valley Trek</h2>
+                <p class="trek-hero-subtitle">Langtang Region, Nepal</p>
+              </div>
             </div>
-            <h2 class="trek-hero-title">Langtang Valley Trek</h2>
-            <p class="trek-hero-subtitle">Langtang Region, Nepal</p>
+            <div class="trek-body">
+              <div class="trek-stats">
+                <div class="trek-stat">
+                  <i class="fas fa-mountain"></i
+                  ><span>4,400m · Kyanjin Ri</span>
+                </div>
+                <div class="trek-stat">
+                  <i class="fas fa-route"></i
+                  ><span>~65 km <span data-de="Strecke">Trail</span></span>
+                </div>
+                <div class="trek-stat">
+                  <i class="fas fa-calendar-alt"></i><span>22–25 Jan 2026</span>
+                </div>
+                <div class="trek-stat">
+                  <i class="fas fa-map-marker-alt"></i
+                  ><span>Langtang, Nepal</span>
+                </div>
+              </div>
+              <p
+                style="
+                  font-size: 0.78rem;
+                  color: var(--rose-gold);
+                  font-weight: 500;
+                  letter-spacing: 0.04em;
+                  margin-bottom: 1rem;
+                "
+              >
+                Kathmandu → Syafru → Bamboo → Langtang Valley → Gompa → Kyanjin
+                Ri
+              </p>
+              <p
+                class="trek-experience"
+                data-de="Riskante Wege, doch jeder Schritt trug eine eigene Schönheit in sich. Mit der besten Truppe über die Jhalunge Hängebrücken am Langtang Khola, während der Lirung Gipfel bei jedem Zeitraffer näher rückte, mit einer ganz eigenen Magie. Ein Spaziergang durch das alte Langtang Valley; die gesamte Siedlung wurde 2015 durch die massive Fels und Eislawine beim Erdbeben zerstört, und heute zu sehen, wie sie vollständig aus dem Wiederaufbau hervorgegangen ist, schöner und stärker als je zuvor. Langtang, du bist die Mühe wert."
+              >
+                Risky roads, yet each step carrying a different kind of beauty.
+                Crossing the Jhalunge suspension bridges over Langtang Khola
+                with the best crew, watching Lirung peak get closer with a
+                different kind of magic in every timelapse. Walking through Old
+                Langtang Valley ; the whole settlement destroyed by the massive
+                rock-ice avalanche during the 2015 earthquake, and seeing it
+                today, fully transitioned from "recovery mode," back, beautiful,
+                and better than ever. Langtang, you're worth the struggle.
+              </p>
+              <p
+                class="trek-gallery-label"
+                data-de="Galerie: Langtang Tagebuch"
+              >
+                Gallery Langtang Diaries
+              </p>
+              <div class="trek-gallery">
+                <div
+                  class="trek-gallery-item featured"
+                  onclick="openLightbox(0)"
+                >
+                  <img
+                    src="./v2/img/treks/langtang/langtang-11.png"
+                    alt="Langtang Trek"
+                  />
+                </div>
+                <div class="trek-gallery-item" onclick="openLightbox(1)">
+                  <img
+                    src="./v2/img/treks/langtang/langtang-2.png"
+                    alt="Langtang Trek"
+                  />
+                </div>
+                <div class="trek-gallery-item" onclick="openLightbox(2)">
+                  <img
+                    src="./v2/img/treks/langtang/langtang-3.png"
+                    alt="Langtang Trek"
+                  />
+                </div>
+                <div class="trek-gallery-item" onclick="openLightbox(3)">
+                  <img
+                    src="./v2/img/treks/langtang/langtang-4.png"
+                    alt="Langtang Trek"
+                  />
+                </div>
+                <div class="trek-gallery-item" onclick="openLightbox(4)">
+                  <img
+                    src="./v2/img/treks/langtang/langtang-10.png"
+                    alt="Langtang Trek"
+                  />
+                </div>
+                <div class="trek-gallery-item" onclick="openLightbox(5)">
+                  <img
+                    src="./v2/img/treks/langtang/langtang-6.png"
+                    alt="Langtang Trek"
+                  />
+                </div>
+                <div class="trek-gallery-item" onclick="openLightbox(6)">
+                  <img
+                    src="./v2/img/treks/langtang/langtang-7.png"
+                    alt="Langtang Trek"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="trek-card trek-slide">
+            <div class="trek-hero germany-hero">
+              <img
+                src="./v2/img/treks/germany/1.png"
+                alt="Germany I explored"
+                onerror="this.style.display = 'none'"
+              />
+              <div class="trek-hero-overlay">
+                <div class="trek-badge">
+                  <i class="fas fa-location-dot"></i> Germany
+                </div>
+                <h2 class="trek-hero-title">Germany I explored</h2>
+
+                <p
+                  class="trek-hero-subtitle"
+                  data-de="Deutschland hat mich mit offenen Armen empfangen - und zeigt mir seine Schönheit, einen neuen Ort nach dem anderen."
+                >
+                  Germany welcomed me with open arms, unfolding its beauty one
+                  place at a time.
+                </p>
+              </div>
+            </div>
+            <div class="trek-body">
+              <!-- <div class="trek-stats">
+                <div class="trek-stat">
+                  <i class="fas fa-city"></i><span>Hamburg</span>
+                </div>
+                <div class="trek-stat">
+                  <i class="fas fa-city"></i><span>Göttingen</span>
+                </div>
+                <div class="trek-stat">
+                  <i class="fas fa-city"></i><span>Kassel</span>
+                </div>
+                <div class="trek-stat">
+                  <i class="fas fa-city"></i><span>Stuttgart</span>
+                </div>
+              </div> -->
+              <p
+                style="
+                  font-size: 0.78rem;
+                  color: var(--rose-gold);
+                  font-weight: 500;
+                  letter-spacing: 0.04em;
+                  margin-bottom: 1rem;
+                "
+              >
+                <span
+                  data-de="Deutschland hat mich mit offenen Armen empfangen - und zeigt mir seine Schönheit, einen neuen Ort nach dem anderen."
+                  >Germany welcomed me with open arms, unfolding its beauty one
+                  place at a time.</span
+                >
+              </p>
+
+              <p
+                class="trek-experience"
+                data-de="Deutschland erscheint mir wie eine stille, lebendige Geschichte - erzählt durch schlichte Architektur und kleine, spiegelglatte Flüsse, die den Himmel in sich tragen. Jede Jahreszeit hat ihren eigenen Charakter, und jede Stadt singt eine vertraute, doch ganz andere Melodie. Von der NRW-Region über Kassel und Göttingen bis zur Fährfahrt in Hamburg wurde jede Station zu einem Sonnenstrahl in meiner Erinnerung. Entlang der Hügel zu wandeln, die Schönheit zu entdecken und einige Augenblicke für mein Handy festzuhalten fühlte sich an, als würde ich kleine Wunder mit nach Hause nehmen."
+              >
+                Germany feels like a quiet, living story, told through simple
+                architecture and tiny rivers so clear they seem to hold the sky
+                within them. Every season carries its own character, and every
+                city sings a familiar yet distinctly different melody. From the
+                NRW region to Kassel and Göttingen, and especially my ferry ride
+                in Hamburg, each stop became a little light in my memory.
+                Walking down the hills, watching the beauty unfold, and
+                capturing a few moments on my phone felt like gathering tiny
+                wonders to take home.
+              </p>
+              <p
+                class="trek-gallery-label"
+                data-de="Galerie: Deutschland Tagebuch"
+              >
+                Gallery Germany Diaries
+              </p>
+              <div class="trek-gallery germany-gallery">
+                <div
+                  class="trek-gallery-item featured travel-image-placeholder"
+                >
+                  <img src="./v2/img/treks/germany/8.png" alt="Kassel" />
+                </div>
+                <div class="trek-gallery-item travel-image-placeholder">
+                  <img src="./v2/img/treks/germany/5.png" alt="germany" />
+                </div>
+                <div class="trek-gallery-item travel-image-placeholder">
+                  <img src="./v2/img/treks/germany/2.png" alt="germany" />
+                </div>
+                <div class="trek-gallery-item travel-image-placeholder">
+                  <img src="./v2/img/treks/germany/0.png" alt="germany" />
+                </div>
+                <div class="trek-gallery-item travel-image-placeholder">
+                  <img src="./v2/img/treks/germany/4.png" alt="germany" />
+                </div>
+                <div class="trek-gallery-item travel-image-placeholder">
+                  <img src="./v2/img/treks/germany/5.png" alt="germany" />
+                </div>
+                <div class="trek-gallery-item travel-image-placeholder">
+                  <img src="./v2/img/treks/germany/6.png" alt="germany" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="trek-body">
-          <div class="trek-stats">
-            <div class="trek-stat">
-              <i class="fas fa-mountain"></i><span>4,400m · Kyanjin Ri</span>
-            </div>
-            <div class="trek-stat">
-              <i class="fas fa-route"></i
-              ><span>~65 km <span data-de="Strecke">Trail</span></span>
-            </div>
-            <div class="trek-stat">
-              <i class="fas fa-calendar-alt"></i><span>22–25 Jan 2026</span>
-            </div>
-            <div class="trek-stat">
-              <i class="fas fa-map-marker-alt"></i><span>Langtang, Nepal</span>
-            </div>
-          </div>
-          <p
-            style="
-              font-size: 0.78rem;
-              color: var(--rose-gold);
-              font-weight: 500;
-              letter-spacing: 0.04em;
-              margin-bottom: 1rem;
-            "
+        <div class="trek-carousel-nav">
+          <button
+            class="trek-carousel-btn"
+            onclick="prevTrek()"
+            aria-label="Previous travel story"
           >
-            Kathmandu → Syafru → Bamboo → Langtang Valley → Gompa → Kyanjin Ri
-          </p>
-          <p
-            class="trek-experience"
-            data-de="Riskante Wege, doch jeder Schritt trug eine eigene Schönheit in sich. Mit der besten Truppe über die Jhalunge Hängebrücken am Langtang Khola, während der Lirung Gipfel bei jedem Zeitraffer näher rückte, mit einer ganz eigenen Magie. Ein Spaziergang durch das alte Langtang Valley; die gesamte Siedlung wurde 2015 durch die massive Fels und Eislawine beim Erdbeben zerstört, und heute zu sehen, wie sie vollständig aus dem Wiederaufbau hervorgegangen ist, schöner und stärker als je zuvor. Langtang, du bist die Mühe wert."
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <span class="trek-carousel-counter" id="trekCounter">1 / 2</span>
+          <button
+            class="trek-carousel-btn"
+            onclick="nextTrek()"
+            aria-label="Next travel story"
           >
-            Risky roads, yet each step carrying a different kind of beauty.
-            Crossing the Jhalunge suspension bridges over Langtang Khola with
-            the best crew, watching Lirung peak get closer with a different kind
-            of magic in every timelapse. Walking through Old Langtang Valley ;
-            the whole settlement destroyed by the massive rock-ice avalanche
-            during the 2015 earthquake, and seeing it today, fully transitioned
-            from "recovery mode," back, beautiful, and better than ever.
-            Langtang, you're worth the struggle.
-          </p>
-          <p class="trek-gallery-label" data-de="Galerie: Langtang Tagebuch">
-            Gallery Langtang Diaries
-          </p>
-          <div class="trek-gallery">
-            <div class="trek-gallery-item featured" onclick="openLightbox(0)">
-              <img
-                src="./v2/img/treks/langtang/langtang-11.png"
-                alt="Langtang Trek"
-              />
-            </div>
-            <div class="trek-gallery-item" onclick="openLightbox(1)">
-              <img
-                src="./v2/img/treks/langtang/langtang-2.png"
-                alt="Langtang Trek"
-              />
-            </div>
-            <div class="trek-gallery-item" onclick="openLightbox(2)">
-              <img
-                src="./v2/img/treks/langtang/langtang-3.png"
-                alt="Langtang Trek"
-              />
-            </div>
-            <div class="trek-gallery-item" onclick="openLightbox(3)">
-              <img
-                src="./v2/img/treks/langtang/langtang-4.png"
-                alt="Langtang Trek"
-              />
-            </div>
-            <div class="trek-gallery-item" onclick="openLightbox(4)">
-              <img
-                src="./v2/img/treks/langtang/langtang-10.png"
-                alt="Langtang Trek"
-              />
-            </div>
-            <div class="trek-gallery-item" onclick="openLightbox(5)">
-              <img
-                src="./v2/img/treks/langtang/langtang-6.png"
-                alt="Langtang Trek"
-              />
-            </div>
-            <div class="trek-gallery-item" onclick="openLightbox(6)">
-              <img
-                src="./v2/img/treks/langtang/langtang-7.png"
-                alt="Langtang Trek"
-              />
-            </div>
-          </div>
+            <i class="fas fa-arrow-right"></i>
+          </button>
         </div>
       </div>
     </section>

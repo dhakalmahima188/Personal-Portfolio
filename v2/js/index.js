@@ -148,6 +148,24 @@ function prevPoem() {
   goToPoem((currentPoem - 1 + totalPoems) % totalPoems);
 }
 
+let currentTrek = 0;
+const trekTrack = document.getElementById("trekTrack");
+const totalTreks = trekTrack ? trekTrack.children.length : 0;
+const trekCounter = document.getElementById("trekCounter");
+
+function goToTrek(n) {
+  if (!trekTrack || totalTreks === 0) return;
+  currentTrek = (n + totalTreks) % totalTreks;
+  trekTrack.style.transform = `translateX(-${currentTrek * 100}%)`;
+  if (trekCounter) trekCounter.textContent = `${currentTrek + 1} / ${totalTreks}`;
+}
+function nextTrek() {
+  goToTrek(currentTrek + 1);
+}
+function prevTrek() {
+  goToTrek(currentTrek - 1);
+}
+
 let sparkleCount = 0;
 document.addEventListener("mousemove", (e) => {
   sparkleCount++;
