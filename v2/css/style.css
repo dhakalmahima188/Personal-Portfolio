@@ -801,6 +801,10 @@ section {
   position: relative;
   padding-right: 110px;
 }
+.edu-card-university:has(.edu-university-photo),
+.edu-card-school:has(.edu-university-photo) {
+  padding-right: 150px;
+}
 .edu-university-logo,
 .edu-institution-mark {
   position: absolute;
@@ -812,6 +816,19 @@ section {
   opacity: 0.35;
   mix-blend-mode: multiply;
   transform: translateY(-50%);
+}
+.edu-university-photo {
+  position: absolute;
+  top: 50%;
+  right: 1.35rem;
+  width: 108px;
+  height: 118px;
+  object-fit: cover;
+  object-position: center 22%;
+  border-radius: 12px;
+  border: 3px solid rgba(255, 250, 247, 0.9);
+  box-shadow: 0 8px 24px rgba(74, 25, 66, 0.12);
+  transform: translateY(-50%) scale(1.1);
 }
 .edu-institution-mark {
   display: grid;
@@ -2476,11 +2493,20 @@ section {
   .edu-card-school {
     padding-right: 78px;
   }
+  .edu-card-university:has(.edu-university-photo),
+  .edu-card-school:has(.edu-university-photo) {
+    padding-right: 104px;
+  }
   .edu-university-logo,
   .edu-institution-mark {
     right: 1rem;
     width: 48px;
     height: 48px;
+  }
+  .edu-university-photo {
+    right: 0.75rem;
+    width: 76px;
+    height: 86px;
   }
   .edu-institution-mark {
     font-size: 2rem;
