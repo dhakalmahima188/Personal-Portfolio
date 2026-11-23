@@ -183,7 +183,7 @@ function stopTrekAutoplay() {
 
 function scheduleNextTrek() {
   if (!trekCarousel || trekAutoplay) return;
-  const delay = currentTrek === 0 ? 8000 : 4500;
+  const delay = currentTrek === 0 ? 6000 : 4500;
   trekAutoplay = setTimeout(() => {
     trekAutoplay = null;
     nextTrek();
