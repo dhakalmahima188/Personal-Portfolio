@@ -166,6 +166,26 @@ function prevTrek() {
   goToTrek(currentTrek - 1);
 }
 
+const trekCarousel = document.querySelector(".trek-carousel");
+let trekAutoplay = null;
+
+function startTrekAutoplay() {
+  if (!trekCarousel || trekAutoplay) return;
+  trekAutoplay = setInterval(nextTrek, 4500);
+}
+
+function stopTrekAutoplay() {
+  if (!trekAutoplay) return;
+  clearInterval(trekAutoplay);
+  trekAutoplay = null;
+}
+
+if (trekCarousel) {
+  startTrekAutoplay();
+  trekCarousel.addEventListener("mouseenter", stopTrekAutoplay);
+  trekCarousel.addEventListener("mouseleave", startTrekAutoplay);
+}
+
 let sparkleCount = 0;
 document.addEventListener("mousemove", (e) => {
   sparkleCount++;
