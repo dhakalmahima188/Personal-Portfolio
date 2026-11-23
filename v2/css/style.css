@@ -1999,7 +1999,7 @@ section {
   color: var(--rose);
   background: linear-gradient(135deg, var(--blush-light), var(--lavender));
   text-align: center;
-  cursor: default;
+  cursor: pointer;
 }
 .travel-image-placeholder i {
   font-size: 1.1rem;
