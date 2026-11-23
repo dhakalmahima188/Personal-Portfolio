@@ -171,13 +171,24 @@ let trekAutoplay = null;
 
 function startTrekAutoplay() {
   if (!trekCarousel || trekAutoplay) return;
-  trekAutoplay = setInterval(nextTrek, 4500);
+  scheduleNextTrek();
 }
 
 function stopTrekAutoplay() {
   if (!trekAutoplay) return;
   clearInterval(trekAutoplay);
+  clearTimeout(trekAutoplay);
   trekAutoplay = null;
+}
+
+function scheduleNextTrek() {
+  if (!trekCarousel || trekAutoplay) return;
+  const delay = currentTrek === 0 ? 8000 : 4500;
+  trekAutoplay = setTimeout(() => {
+    trekAutoplay = null;
+    nextTrek();
+    scheduleNextTrek();
+  }, delay);
 }
 
 if (trekCarousel) {
